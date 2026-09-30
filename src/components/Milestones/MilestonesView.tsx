@@ -61,7 +61,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
 
         {/* Multi-step track */}
         <div className="relative pt-2 pb-1">
-          <div className="h-2 w-full bg-black rounded-full overflow-hidden border border-[#1A6B66]">
+          <div className="h-2 w-full bg-[#0D4F4C] rounded-full overflow-hidden border border-[#1A6B66]">
             <div
               className="h-full bg-[#D4A853] transition-all duration-500"
               style={{
@@ -95,7 +95,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                   ? 'bg-[#F0F4F2]/90 border-[#D4A853]/30 cursor-pointer hover:border-[#D4A853]/60'
                   : isNextTarget
                   ? 'bg-[#F0F4F2]/95 border-amber-500/40 shadow-lg shadow-amber-950/20'
-                  : 'bg-black/60 border-[#1A6B66]/80 opacity-75'
+                  : 'bg-[#0D4F4C]/60 border-[#1A6B66]/80 opacity-75'
               }`}
             >
               <div className="flex items-start justify-between gap-3">

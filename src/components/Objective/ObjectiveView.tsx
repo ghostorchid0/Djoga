@@ -36,7 +36,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       {/* Page Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-extrabold tracking-tight text-black flex items-center gap-2">
+          <h1 className="text-xl font-extrabold tracking-tight text-[#0D4F4C] flex items-center gap-2">
             <Target className="w-5 h-5 text-[#D4A853]" />
             <span>MON OBJECTIF</span>
           </h1>
@@ -60,7 +60,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
           <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Objectif total
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-black mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] mt-1 block">
             {formatFCFA(goalAmount)}
           </span>
           <span className="text-[10px] text-gray-600/70">fonds de sécurité</span>
@@ -93,7 +93,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
           <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Progression
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-black mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] mt-1 block">
             {progressPercentage.toFixed(1)} %
           </span>
           <span className="text-[10px] text-gray-600/70">du parcours validé</span>
@@ -111,7 +111,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
           {/* Target Pace */}
           <div className="bg-[#FAF8F5] border border-[#1A6B66]/30 rounded-xl p-4">
             <span className="text-xs text-gray-600 font-medium">Rythme cible</span>
-            <div className="text-2xl font-bold font-mono text-black mt-1">
+            <div className="text-2xl font-bold font-mono text-[#0D4F4C] mt-1">
               {formatFCFA(settings.dailyTarget)} <span className="text-xs font-sans text-gray-600/70">/ jour</span>
             </div>
             <p className="text-[11px] text-gray-600/70 mt-1.5">
@@ -152,7 +152,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
         <div className="grid grid-cols-2 gap-3 text-xs">
           <div className="bg-[#FAF8F5] p-3 rounded-xl border border-[#1A6B66]/30">
             <span className="text-gray-600 block">Épargne théorique :</span>
-            <span className="font-mono font-bold text-black text-sm mt-0.5 block">
+            <span className="font-mono font-bold text-[#0D4F4C] text-sm mt-0.5 block">
               {formatFCFA(theoreticalSavings)}
             </span>
             <span className="text-[10px] text-gray-600/60">({daysElapsed} j × {settings.dailyTarget} F)</span>
@@ -174,7 +174,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
               ? 'bg-[#4A5D23]/10 border-[#4A5D23]/30 text-[#4A5D23]'
               : gap < 0
               ? 'bg-[#C77D63]/10 border-[#C77D63]/30 text-[#C77D63]'
-              : 'bg-[#FAF8F5] border-[#1A6B66]/30 text-black/80'
+              : 'bg-[#FAF8F5] border-[#1A6B66]/30 text-[#0D4F4C]/80'
           }`}
         >
           <div className="flex items-start gap-3">
@@ -187,14 +187,14 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
             )}
 
             <div>
-              <h3 className="font-bold text-sm sm:text-base text-black">
+              <h3 className="font-bold text-sm sm:text-base text-[#0D4F4C]">
                 {gap > 0
                   ? `Tu es en avance de ${formatFCFA(gap)}.`
                   : gap < 0
                   ? `Tu as ${formatFCFA(Math.abs(gap))} de retard.`
                   : 'Tu es pile au rythme prévu.'}
               </h3>
-              <p className="text-xs text-black/80 mt-1">
+              <p className="text-xs text-[#0D4F4C]/80 mt-1">
                 {gap > 0
                   ? 'Excellente gestion. Ta rigueur te permet de sécuriser ton fonds plus vite que prévu.'
                   : gap < 0
@@ -209,7 +209,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
         {!isCompleted && (
           <div className="bg-[#1A1A1A]/80 border border-[#D4A574]/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <span className="text-xs font-semibold text-black/80 block">
+              <span className="text-xs font-semibold text-[#0D4F4C]/80 block">
                 Nouveau montant quotidien nécessaire
               </span>
               <p className="text-[11px] text-gray-600 mt-0.5">

@@ -40,7 +40,7 @@ export function useSavings() {
   // Force light theme
   useEffect(() => {
     document.documentElement.classList.remove('dark');
-    document.body.className = 'bg-[#F0F4F2] text-black antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
+    document.body.className = 'bg-[#F0F4F2] text-[#0D4F4C] antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
   }, []);
 
   const calculations = useMemo(() => {

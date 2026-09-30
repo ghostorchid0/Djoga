@@ -106,7 +106,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
         </div>
 
         {chartPoints.length < 2 ? (
-          <div className="h-44 flex flex-col items-center justify-center text-center text-xs text-gray-600 bg-black/40 rounded-xl p-4 border border-[#1A6B66]/80">
+          <div className="h-44 flex flex-col items-center justify-center text-center text-xs text-gray-600 bg-[#0D4F4C]/40 rounded-xl p-4 border border-[#1A6B66]/80">
             <p>Ajoute des cotisations sur plusieurs jours pour observer ta courbe de croissance.</p>
           </div>
         ) : (

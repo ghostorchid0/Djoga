@@ -126,7 +126,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               className="p-4 flex items-center justify-between hover:bg-slate-850/60 transition group"
             >
               <div className="space-y-0.5">
-                <div className="text-xs font-black text-slate-200 uppercase tracking-wider font-mono">
+                <div className="text-xs font-[#0D4F4C] text-slate-200 uppercase tracking-wider font-mono">
                   {formatDateFrench(item.date, { day: 'numeric', month: 'short', year: 'numeric' })}
                 </div>
                 {item.note && (

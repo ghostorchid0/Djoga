@@ -40,7 +40,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D4F4C]/60 backdrop-blur-sm p-4 animate-in fade-in duration-300">
       <div className="w-full max-w-md bg-white border border-[#1A6B66]/30 rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
         {/* Glow */}
         <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#D4A853]/10 rounded-full blur-3xl pointer-events-none" />
@@ -94,7 +94,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={goalAmount}
                   onChange={(e) => setGoalAmount(Number(e.target.value))}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="5000"
                   step="5000"
                 />
@@ -154,7 +154,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={dailyTarget}
                   onChange={(e) => setDailyTarget(Number(e.target.value))}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="200"
                   step="100"
                 />
@@ -219,14 +219,14 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#D4A853] pl-10"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#D4A853] pl-10"
                 />
                 <Calendar className="w-4 h-4 text-gray-600 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 
             {/* Discipline Pledge */}
-            <div className="bg-black/80 border border-[#1A6B66] rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
+            <div className="bg-[#0D4F4C]/80 border border-[#1A6B66] rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
               <div className="font-semibold text-[#D4A853] flex items-center gap-1.5">
                 <Target className="w-3.5 h-3.5" />
                 <span>Règle d'or de sanctuarisation</span>

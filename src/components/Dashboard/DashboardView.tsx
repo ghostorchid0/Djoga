@@ -52,7 +52,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="flex items-center gap-2">
           <ShieldAlert className="w-4 h-4 text-[#6366F1] shrink-0" />
           <span className="truncate">
-            <strong className="text-black">Règle de fer :</strong> Ce fonds est exclusivement dédié à ta sécurité financière personnelle (200 000 FCFA).
+            <strong className="text-[#0D4F4C]">Règle de fer :</strong> Ce fonds est exclusivement dédié à ta sécurité financière personnelle (200 000 FCFA).
           </span>
         </div>
       </div>
@@ -76,7 +76,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
+            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
               {formatFCFA(totalSaved)}
             </span>
             <span className="text-[10px] text-gray-600/70">total sécurisé</span>
@@ -94,7 +94,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
+            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
               {formatFCFA(remainingAmount)}
             </span>
             <span className="text-[10px] text-gray-600/70">pour atteindre le but</span>
@@ -112,7 +112,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
+            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
               {totalDaysContributed} <span className="text-xs font-normal text-gray-600/70">jours</span>
             </span>
             <span className="text-[10px] text-gray-600/70">jours d'action active</span>
@@ -147,7 +147,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div className="pt-1">
         <button
           onClick={onOpenContributionModal}
-          className="w-full flex items-center justify-center gap-2.5 rounded-lg bg-[#D4A853] hover:bg-[#B8956E] text-white font-black text-base py-4 px-6 shadow-xl shadow-[#D4A853]/30 active:scale-[0.98] transition-all cursor-pointer"
+          className="w-full flex items-center justify-center gap-2.5 rounded-lg bg-[#D4A853] hover:bg-[#B8956E] text-white font-[#0D4F4C] text-base py-4 px-6 shadow-xl shadow-[#D4A853]/30 active:scale-[0.98] transition-all cursor-pointer"
         >
           <Plus className="w-6 h-6 stroke-[3]" />
           <span className="tracking-wide">+ AJOUTER UNE COTISATION</span>
@@ -168,7 +168,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               ) : (
                 <TrendingDown className="w-4 h-4 text-[#F59E0B]" />
               )}
-              <span className="text-xs font-semibold text-black/80 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-[#0D4F4C]/80 uppercase tracking-wider">
                 Rythme & Synchronisation
               </span>
             </div>
@@ -177,22 +177,22 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
           <div className="mt-2.5">
             {gap > 0 ? (
-              <p className="text-xs text-black/80">
+              <p className="text-xs text-[#0D4F4C]/80">
                 Tu es en <strong className="text-[#10B981] font-bold">avance de {formatFCFA(gap)}</strong> sur ton planning initial.
               </p>
             ) : gap < 0 ? (
-              <p className="text-xs text-black/80">
+              <p className="text-xs text-[#0D4F4C]/80">
                 Tu as <strong className="text-[#F59E0B] font-bold">{formatFCFA(Math.abs(gap))} de retard</strong> sur la cible théorique.
               </p>
             ) : (
-              <p className="text-xs text-black/80">
+              <p className="text-xs text-[#0D4F4C]/80">
                 Tu suis <strong className="text-[#10B981] font-bold">exactement le rythme prévu</strong> ({formatFCFA(settings.dailyTarget)} / jour).
               </p>
             )}
 
             {remainingAmount > 0 && neededDailyAmount > 0 && (
               <p className="text-[11px] text-gray-600/70 mt-1">
-                Nouveau rythme conseillé : <strong className="text-black font-mono">{formatFCFA(neededDailyAmount)} / jour</strong>
+                Nouveau rythme conseillé : <strong className="text-[#0D4F4C] font-mono">{formatFCFA(neededDailyAmount)} / jour</strong>
               </p>
             )}
           </div>
@@ -206,7 +206,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#EC4899]" />
-              <span className="text-xs font-semibold text-black/80 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-[#0D4F4C]/80 uppercase tracking-wider">
                 Prochain Palier
               </span>
             </div>
@@ -217,7 +217,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             {nextMilestone ? (
               <div>
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-black">{nextMilestone.label}</span>
+                  <span className="text-[#0D4F4C]">{nextMilestone.label}</span>
                   <span className="text-[#6366F1] font-mono">{formatFCFA(nextMilestone.amount)}</span>
                 </div>
                 <div className="text-[11px] text-gray-600/70 mt-1">
@@ -270,7 +270,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             {recentContributions.slice(0, 4).map((c) => (
               <div key={c.id} className="p-3.5 flex items-center justify-between hover:bg-[#F8FAFC] transition">
                 <div>
-                  <div className="text-xs font-bold text-black/80 uppercase tracking-wide">
+                  <div className="text-xs font-bold text-[#0D4F4C]/80 uppercase tracking-wide">
                     {formatDateFrench(c.date, { day: 'numeric', month: 'short' })}
                   </div>
                   {c.note && (

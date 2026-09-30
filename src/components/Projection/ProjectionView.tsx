@@ -34,7 +34,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
       </div>
 
       {/* Main Focus: Current Rhythm Projection */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-950/60 via-[#F0F4F2] to-black border border-emerald-500/30 p-5 sm:p-6 shadow-xl">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-950/60 via-[#F0F4F2] to-[#0D4F4C] border border-emerald-500/30 p-5 sm:p-6 shadow-xl">
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
           <Sparkles className="w-4 h-4" />
           <span>Avec ton rythme actuel</span>
@@ -131,7 +131,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-black/80 border border-[#1A6B66] rounded-xl p-4 flex items-center justify-between">
+        <div className="bg-[#0D4F4C]/80 border border-[#1A6B66] rounded-xl p-4 flex items-center justify-between">
           <div>
             <span className="text-xs text-gray-600 block">Date cible résultante :</span>
             <span className="text-base font-bold text-white capitalize mt-0.5 block">

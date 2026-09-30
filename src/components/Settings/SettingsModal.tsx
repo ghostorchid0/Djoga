@@ -147,7 +147,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xs p-3 sm:p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D4F4C]/80 backdrop-blur-xs p-3 sm:p-4">
       <div className="w-full max-w-lg bg-[#F0F4F2] border border-[#1A6B66] rounded-3xl shadow-2xl p-5 sm:p-6 max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200">
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]">
@@ -185,7 +185,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="number"
                   value={goalAmount}
                   onChange={(e) => setGoalAmount(Number(e.target.value))}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
                   min="1000"
                   step="1000"
                   required
@@ -200,7 +200,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="number"
                   value={dailyTarget}
                   onChange={(e) => setDailyTarget(Number(e.target.value))}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
                   min="100"
                   step="100"
                   required
@@ -217,7 +217,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
                   required
                 />
               </div>
@@ -230,7 +230,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="date"
                   value={targetDate}
                   onChange={(e) => setTargetDate(e.target.value)}
-                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-[#0D4F4C] border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
                   required
                 />
               </div>
@@ -244,7 +244,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <span>Rappel quotidien</span>
             </h3>
 
-            <div className="bg-black/70 border border-[#1A6B66]/80 rounded-xl p-3.5 space-y-3">
+            <div className="bg-[#0D4F4C]/70 border border-[#1A6B66]/80 rounded-xl p-3.5 space-y-3">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-xs font-semibold text-slate-200 block">
@@ -298,7 +298,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportCSV}
-                className="py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en CSV</span>
@@ -307,7 +307,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportJSON}
-                className="py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en JSON</span>
@@ -315,7 +315,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             <div className="pt-1">
-              <label className="w-full py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer">
+              <label className="w-full py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer">
                 <Upload className="w-3.5 h-3.5 text-gray-600" />
                 <span>Importer une sauvegarde (JSON)</span>
                 <input
@@ -361,7 +361,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
         {/* Reset Confirmation Modal */}
         {showResetConfirm && (
-          <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/90 p-4">
+          <div className="fixed inset-0 z-60 flex items-center justify-center bg-[#0D4F4C]/90 p-4">
             <div className="w-full max-w-sm rounded-2xl bg-[#F0F4F2] border border-rose-500/40 p-5 shadow-2xl space-y-4">
               <div className="flex items-center gap-2 text-rose-400">
                 <AlertTriangle className="w-5 h-5 shrink-0" />
@@ -381,7 +381,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   value={resetConfirmInput}
                   onChange={(e) => setResetConfirmInput(e.target.value)}
                   placeholder="SUPPRIMER"
-                  className="w-full bg-black border border-rose-500/40 rounded-xl px-3 py-2 text-sm text-white focus:outline-none"
+                  className="w-full bg-[#0D4F4C] border border-rose-500/40 rounded-xl px-3 py-2 text-sm text-white focus:outline-none"
                 />
               </div>
 

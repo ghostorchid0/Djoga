@@ -109,7 +109,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-black text-slate-100">
+      <div className="min-h-screen flex items-center justify-center bg-[#0D4F4C] text-slate-100">
         <div className="flex flex-col items-center gap-3">
           <div className="w-10 h-10 border-3 border-[#D4A853]/20 border-t-[#D4A853] rounded-full animate-spin" />
           <span className="text-xs uppercase tracking-widest text-gray-600 font-bold">
@@ -121,9 +121,9 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F0F4F2] text-black flex flex-col font-sans transition-colors duration-200">
+    <div className="min-h-screen bg-[#F0F4F2] text-[#0D4F4C] flex flex-col font-sans transition-colors duration-200">
       {/* Top Header Bar */}
-      <header className="sticky top-0 z-40 bg-black border-b border-[#1A6B66]/30 px-4 py-3 sm:px-6 shadow-sm">
+      <header className="sticky top-0 z-40 bg-[#0D4F4C] border-b border-[#1A6B66]/30 px-4 py-3 sm:px-6 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           {/* Brand */}
           <div
@@ -135,7 +135,7 @@ export default function App() {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="text-sm font-black tracking-tight text-white uppercase">
+                <span className="text-sm font-[#0D4F4C] tracking-tight text-white uppercase">
                   DJOGA
                 </span>
                 {activeTab === 'dashboard' && (
@@ -302,7 +302,7 @@ export default function App() {
       </main>
 
       {/* Mobile Bottom Navigation Bar (Visible on mobile screens) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-black border-t border-[#1A6B66]/30 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0D4F4C] border-t border-[#1A6B66]/30 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
         <div className="flex items-center justify-around">
           {/* 1. Dashboard */}
           <button
@@ -365,8 +365,8 @@ export default function App() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="absolute bottom-0 left-0 right-0 bg-black border-t border-[#1A6B66]/30 rounded-t-3xl p-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-bottom-4 duration-200">
+        <div className="md:hidden fixed inset-0 z-50 bg-[#0D4F4C]/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="absolute bottom-0 left-0 right-0 bg-[#0D4F4C] border-t border-[#1A6B66]/30 rounded-t-3xl p-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-bottom-4 duration-200">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-sm font-bold text-white uppercase tracking-wider">Menu</h2>
               <button
@@ -453,7 +453,7 @@ export default function App() {
 
       {/* Discrete Toast Notice */}
       {toastMessage && (
-        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-xl bg-black/95 border border-[#D4A853]/40 text-[#D4A853] font-medium px-4 py-2.5 text-xs shadow-2xl animate-in slide-in-from-top-3">
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-xl bg-[#0D4F4C]/95 border border-[#D4A853]/40 text-[#D4A853] font-medium px-4 py-2.5 text-xs shadow-2xl animate-in slide-in-from-top-3">
           <CheckCircle2 className="w-4 h-4 text-[#D4A853] shrink-0" />
           <span>{toastMessage}</span>
         </div>

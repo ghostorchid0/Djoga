@@ -133,7 +133,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         </div>
 
         {/* Legend */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 p-2.5 rounded-xl bg-black/60 border border-[#1A6B66]/80 text-[11px]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 p-2.5 rounded-xl bg-[#0D4F4C]/60 border border-[#1A6B66]/80 text-[11px]">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-md bg-[#D4A853] shadow-xs shadow-[#D4A853]/50" />
             <span className="text-slate-300">Objectif atteint (1 000 F)</span>
@@ -169,7 +169,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
             return (
               <div
                 key={`prev-${i}`}
-                className="h-11 sm:h-13 rounded-xl p-1 text-slate-600 bg-black/20 text-center flex flex-col justify-center text-xs opacity-40"
+                className="h-11 sm:h-13 rounded-xl p-1 text-slate-600 bg-[#0D4F4C]/20 text-center flex flex-col justify-center text-xs opacity-40"
               >
                 <span>{dayNum}</span>
               </div>
@@ -200,7 +200,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
                 type="button"
                 onClick={() => setSelectedDate(dateStr)}
                 className={`h-11 sm:h-13 rounded-xl p-1 text-center flex flex-col items-center justify-between transition-all cursor-pointer relative ${badgeColor} ${
-                  isSelected ? 'ring-2 ring-[#D4A853] ring-offset-2 ring-offset-black scale-105 z-10' : 'hover:scale-[1.02]'
+                  isSelected ? 'ring-2 ring-[#D4A853] ring-offset-2 ring-offset-[#0D4F4C] scale-105 z-10' : 'hover:scale-[1.02]'
                 } ${isToday ? 'outline-1 outline-gray-600' : ''}`}
               >
                 <div className="w-full flex items-center justify-between px-1">
