@@ -4,6 +4,17 @@
   :root {
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --safe-top: env(safe-area-inset-top, 0px);
+
+    /* African-inspired color palette */
+    --color-terracotta: #C77D63;
+    --color-sand: #D4A574;
+    --color-ochre: #E8B86D;
+    --color-deep-earth: #3D2B1F;
+    --color-savanna: #4A5D23;
+    --color-golden: #D4A853;
+    --color-ivory: #F5F0E6;
+    --color-charcoal: #1A1A1A;
+    --color-bronze: #8B6914;
   }
 
   html {

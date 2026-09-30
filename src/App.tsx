@@ -118,16 +118,16 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans transition-colors duration-200">
+    <div className="min-h-screen bg-[#1A1A1A] text-[#F5F0E6] flex flex-col font-sans transition-colors duration-200">
       {/* Top Header Bar */}
-      <header className="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 px-4 py-3 sm:px-6">
+      <header className="sticky top-0 z-40 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-[#3D2B1F]/30 px-4 py-3 sm:px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           {/* Brand */}
           <div
             onClick={() => setActiveTab('dashboard')}
             className="flex items-center gap-2.5 cursor-pointer group"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-md shadow-emerald-950/40 p-1.5 group-hover:scale-105 transition">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#D4A853] to-[#C77D63] flex items-center justify-center shadow-md shadow-[#3D2B1F]/40 p-1.5 group-hover:scale-105 transition">
               <Shield className="w-5 h-5 text-white stroke-[2.2]" />
             </div>
             <div>
@@ -135,7 +135,7 @@ export default function App() {
                 <span className="text-sm font-black tracking-tight text-white uppercase">
                   DJOGA
                 </span>
-                <span className="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">
+                <span className="text-[10px] font-mono font-bold text-[#D4A853] bg-[#D4A853]/10 px-1.5 py-0.5 rounded border border-[#D4A853]/20">
                   {formatFCFA(settings.goalAmount)}
                 </span>
               </div>
@@ -151,9 +151,9 @@ export default function App() {
             {calculations.currentStreak > 0 && (
               <div
                 title={`${calculations.currentStreak} jours consécutifs de cotisation`}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold font-mono"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#C77D63]/10 border border-[#C77D63]/30 text-[#C77D63] text-xs font-bold font-mono"
               >
-                <Flame className="w-3.5 h-3.5 fill-orange-400" />
+                <Flame className="w-3.5 h-3.5 fill-[#C77D63]" />
                 <span>{calculations.currentStreak} j</span>
               </div>
             )}
@@ -164,7 +164,7 @@ export default function App() {
             {/* Settings Trigger */}
             <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-900 border border-slate-800 hover:border-slate-700 transition cursor-pointer"
+              className="p-2 rounded-xl text-[#D4A574] hover:text-[#F5F0E6] hover:bg-[#3D2B1F]/30 border border-[#3D2B1F]/30 hover:border-[#C77D63]/50 transition cursor-pointer"
               aria-label="Paramètres"
               title="Paramètres de l'application"
             >
@@ -174,7 +174,7 @@ export default function App() {
         </div>
 
         {/* Secondary Category Navigation for Desktop & Tablets */}
-        <div className="max-w-4xl mx-auto hidden md:flex items-center gap-1 mt-2.5 pt-2 border-t border-slate-900">
+        <div className="max-w-4xl mx-auto hidden md:flex items-center gap-1 mt-2.5 pt-2 border-t border-[#3D2B1F]/30">
           {[
             { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
             { id: 'objective', label: 'Objectif', icon: Target },
@@ -192,11 +192,11 @@ export default function App() {
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
                   isActive
-                    ? 'bg-slate-800 text-white shadow-xs'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900'
+                    ? 'bg-[#3D2B1F]/50 text-[#F5F0E6] shadow-xs'
+                    : 'text-[#D4A574] hover:text-[#F5F0E6] hover:bg-[#3D2B1F]/30'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-400' : ''}`} />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#D4A853]' : ''}`} />
                 <span>{tab.label}</span>
               </button>
             );
@@ -295,13 +295,13 @@ export default function App() {
       </main>
 
       {/* Mobile Bottom Navigation Bar (Visible on mobile screens) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/90 backdrop-blur-lg border-t border-slate-800/90 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#1A1A1A]/95 backdrop-blur-lg border-t border-[#3D2B1F]/30 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
         <div className="flex items-center justify-around">
           {/* 1. Dashboard */}
           <button
             onClick={() => setActiveTab('dashboard')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'dashboard' ? 'text-emerald-400 font-bold' : 'text-slate-400'
+              activeTab === 'dashboard' ? 'text-[#D4A853] font-bold' : 'text-[#D4A574]'
             }`}
           >
             <LayoutDashboard className="w-4 h-4" />
@@ -312,7 +312,7 @@ export default function App() {
           <button
             onClick={() => setActiveTab('objective')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'objective' ? 'text-emerald-400 font-bold' : 'text-slate-400'
+              activeTab === 'objective' ? 'text-[#D4A853] font-bold' : 'text-[#D4A574]'
             }`}
           >
             <Target className="w-4 h-4" />
@@ -326,7 +326,7 @@ export default function App() {
               setTargetDateForAdd(undefined);
               setIsContributionModalOpen(true);
             }}
-            className="flex items-center justify-center w-11 h-11 -mt-4 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-500 text-slate-950 shadow-lg shadow-emerald-950/60 active:scale-95 transition cursor-pointer"
+            className="flex items-center justify-center w-11 h-11 -mt-4 rounded-2xl bg-gradient-to-tr from-[#D4A853] to-[#C77D63] text-[#1A1A1A] shadow-lg shadow-[#3D2B1F]/60 active:scale-95 transition cursor-pointer"
             aria-label="Ajouter une cotisation"
           >
             <Plus className="w-6 h-6 stroke-[3]" />
@@ -336,7 +336,7 @@ export default function App() {
           <button
             onClick={() => setActiveTab('calendar')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'calendar' ? 'text-emerald-400 font-bold' : 'text-slate-400'
+              activeTab === 'calendar' ? 'text-[#D4A853] font-bold' : 'text-[#D4A574]'
             }`}
           >
             <Calendar className="w-4 h-4" />
@@ -348,8 +348,8 @@ export default function App() {
             onClick={() => setActiveTab('history')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
               activeTab === 'history' || activeTab === 'statistics' || activeTab === 'projection' || activeTab === 'milestones'
-                ? 'text-emerald-400 font-bold'
-                : 'text-slate-400'
+                ? 'text-[#D4A853] font-bold'
+                : 'text-[#D4A574]'
             }`}
           >
             <History className="w-4 h-4" />
@@ -359,28 +359,28 @@ export default function App() {
 
         {/* Secondary quick tabs on mobile for deep views */}
         {(activeTab === 'statistics' || activeTab === 'projection' || activeTab === 'milestones' || activeTab === 'history') && (
-          <div className="flex items-center justify-center gap-1.5 pt-1.5 border-t border-slate-900 mt-1">
+          <div className="flex items-center justify-center gap-1.5 pt-1.5 border-t border-[#3D2B1F]/30 mt-1">
             <button
               onClick={() => setActiveTab('history')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'history' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-500'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'history' ? 'bg-[#3D2B1F]/50 text-[#D4A853] font-bold' : 'text-[#D4A574]/60'}`}
             >
               Historique
             </button>
             <button
               onClick={() => setActiveTab('statistics')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-500'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-[#3D2B1F]/50 text-[#D4A853] font-bold' : 'text-[#D4A574]/60'}`}
             >
               Stats
             </button>
             <button
               onClick={() => setActiveTab('projection')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-500'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-[#3D2B1F]/50 text-[#D4A853] font-bold' : 'text-[#D4A574]/60'}`}
             >
               Projection
             </button>
             <button
               onClick={() => setActiveTab('milestones')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-slate-800 text-emerald-400 font-bold' : 'text-slate-500'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-[#3D2B1F]/50 text-[#D4A853] font-bold' : 'text-[#D4A574]/60'}`}
             >
               Paliers
             </button>

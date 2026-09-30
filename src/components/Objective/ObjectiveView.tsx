@@ -36,18 +36,18 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       {/* Page Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-            <Target className="w-5 h-5 text-emerald-400" />
+          <h1 className="text-xl font-extrabold tracking-tight text-[#F5F0E6] flex items-center gap-2">
+            <Target className="w-5 h-5 text-[#D4A853]" />
             <span>MON OBJECTIF</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-[#D4A574] mt-0.5">
             Bilan d'alignement et discipline quotidienne
           </p>
         </div>
 
         <button
           onClick={onOpenSettings}
-          className="text-xs font-semibold text-emerald-400 hover:text-emerald-300 border border-slate-700 hover:border-emerald-500/50 rounded-xl px-3 py-1.5 transition cursor-pointer"
+          className="text-xs font-semibold text-[#D4A853] hover:text-[#E8B86D] border border-[#D4A574]/30 hover:border-[#D4A853]/50 rounded-xl px-3 py-1.5 transition cursor-pointer"
         >
           Ajuster l'objectif
         </button>
@@ -56,76 +56,76 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       {/* Main Breakdown Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {/* Total Goal */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-[#D4A574] uppercase tracking-wider block">
             Objectif total
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-white mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#F5F0E6] mt-1 block">
             {formatFCFA(goalAmount)}
           </span>
-          <span className="text-[10px] text-slate-400">fonds de sécurité</span>
+          <span className="text-[10px] text-[#D4A574]/70">fonds de sécurité</span>
         </div>
 
         {/* Current Saved */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-[#D4A574] uppercase tracking-wider block">
             Épargne actuelle
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-emerald-400 mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#D4A853] mt-1 block">
             {formatFCFA(totalSaved)}
           </span>
-          <span className="text-[10px] text-slate-400">déjà sécurisé</span>
+          <span className="text-[10px] text-[#D4A574]/70">déjà sécurisé</span>
         </div>
 
         {/* Remaining Amount */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-[#D4A574] uppercase tracking-wider block">
             Reste à épargner
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-amber-300 mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#E8B86D] mt-1 block">
             {formatFCFA(remainingAmount)}
           </span>
-          <span className="text-[10px] text-slate-400">à compléter</span>
+          <span className="text-[10px] text-[#D4A574]/70">à compléter</span>
         </div>
 
         {/* Progress Percentage */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-[#D4A574] uppercase tracking-wider block">
             Progression
           </span>
-          <span className="text-lg sm:text-xl font-bold font-mono text-white mt-1 block">
+          <span className="text-lg sm:text-xl font-bold font-mono text-[#F5F0E6] mt-1 block">
             {progressPercentage.toFixed(1)} %
           </span>
-          <span className="text-[10px] text-slate-400">du parcours validé</span>
+          <span className="text-[10px] text-[#D4A574]/70">du parcours validé</span>
         </div>
       </div>
 
       {/* Rhythm Comparison Card */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-4">
-        <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-          <Clock className="w-4 h-4 text-emerald-400" />
+      <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-5 space-y-4">
+        <h2 className="text-xs font-bold uppercase tracking-wider text-[#D4A574] flex items-center gap-1.5">
+          <Clock className="w-4 h-4 text-[#D4A853]" />
           <span>Comparatif des Rythmes</span>
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Target Pace */}
-          <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
-            <span className="text-xs text-slate-400 font-medium">Rythme cible</span>
-            <div className="text-2xl font-bold font-mono text-white mt-1">
-              {formatFCFA(settings.dailyTarget)} <span className="text-xs font-sans text-slate-400">/ jour</span>
+          <div className="bg-[#1A1A1A]/70 border border-[#D4A574]/30 rounded-xl p-4">
+            <span className="text-xs text-[#D4A574] font-medium">Rythme cible</span>
+            <div className="text-2xl font-bold font-mono text-[#F5F0E6] mt-1">
+              {formatFCFA(settings.dailyTarget)} <span className="text-xs font-sans text-[#D4A574]/70">/ jour</span>
             </div>
-            <p className="text-[11px] text-slate-400 mt-1.5">
+            <p className="text-[11px] text-[#D4A574]/70 mt-1.5">
               Niveau de discipline planifié lors de ton engagement.
             </p>
           </div>
 
           {/* Real Pace */}
-          <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-4">
-            <span className="text-xs text-slate-400 font-medium">Rythme réel</span>
-            <div className="text-2xl font-bold font-mono text-emerald-400 mt-1">
-              {formatFCFA(realDailyAverage)} <span className="text-xs font-sans text-slate-400">/ jour</span>
+          <div className="bg-[#1A1A1A]/70 border border-[#D4A574]/30 rounded-xl p-4">
+            <span className="text-xs text-[#D4A574] font-medium">Rythme réel</span>
+            <div className="text-2xl font-bold font-mono text-[#D4A853] mt-1">
+              {formatFCFA(realDailyAverage)} <span className="text-xs font-sans text-[#D4A574]/70">/ jour</span>
             </div>
-            <p className="text-[11px] text-slate-400 mt-1.5">
+            <p className="text-[11px] text-[#D4A574]/70 mt-1.5">
               Moyenne réelle constatée sur les {daysElapsed} {daysElapsed > 1 ? 'jours écoulés' : 'jour écoulé'}.
             </p>
           </div>
@@ -133,37 +133,37 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       </div>
 
       {/* RETARD / AVANCE CALCULATION */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-4">
+      <div className="bg-[#3D2B1F]/40 border border-[#D4A574]/30 rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[#D4A574] flex items-center gap-1.5">
             {gap >= 0 ? (
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <TrendingUp className="w-4 h-4 text-[#4A5D23]" />
             ) : (
-              <TrendingDown className="w-4 h-4 text-amber-400" />
+              <TrendingDown className="w-4 h-4 text-[#C77D63]" />
             )}
             <span>Bilan Retard / Avance</span>
           </h2>
-          <span className="text-xs text-slate-400 font-mono">
+          <span className="text-xs text-[#D4A574] font-mono">
             {daysElapsed} {daysElapsed > 1 ? 'jours' : 'jour'} d'activité
           </span>
         </div>
 
         {/* Theoretical vs Real Comparison */}
         <div className="grid grid-cols-2 gap-3 text-xs">
-          <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
-            <span className="text-slate-400 block">Épargne théorique :</span>
-            <span className="font-mono font-bold text-white text-sm mt-0.5 block">
+          <div className="bg-[#1A1A1A]/60 p-3 rounded-xl border border-[#D4A574]/30">
+            <span className="text-[#D4A574] block">Épargne théorique :</span>
+            <span className="font-mono font-bold text-[#F5F0E6] text-sm mt-0.5 block">
               {formatFCFA(theoreticalSavings)}
             </span>
-            <span className="text-[10px] text-slate-500">({daysElapsed} j × {settings.dailyTarget} F)</span>
+            <span className="text-[10px] text-[#D4A574]/60">({daysElapsed} j × {settings.dailyTarget} F)</span>
           </div>
 
-          <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
-            <span className="text-slate-400 block">Épargne réelle :</span>
-            <span className="font-mono font-bold text-emerald-400 text-sm mt-0.5 block">
+          <div className="bg-[#1A1A1A]/60 p-3 rounded-xl border border-[#D4A574]/30">
+            <span className="text-[#D4A574] block">Épargne réelle :</span>
+            <span className="font-mono font-bold text-[#D4A853] text-sm mt-0.5 block">
               {formatFCFA(totalSaved)}
             </span>
-            <span className="text-[10px] text-slate-500">solde effectif</span>
+            <span className="text-[10px] text-[#D4A574]/60">solde effectif</span>
           </div>
         </div>
 
@@ -171,30 +171,30 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
         <div
           className={`p-4 rounded-xl border ${
             gap > 0
-              ? 'bg-emerald-950/30 border-emerald-500/30 text-emerald-300'
+              ? 'bg-[#4A5D23]/20 border-[#4A5D23]/40 text-[#4A5D23]'
               : gap < 0
-              ? 'bg-amber-950/30 border-amber-500/30 text-amber-300'
-              : 'bg-slate-800/50 border-slate-700 text-slate-200'
+              ? 'bg-[#C77D63]/20 border-[#C77D63]/40 text-[#C77D63]'
+              : 'bg-[#3D2B1F]/50 border-[#D4A574]/30 text-[#F5F0E6]/80'
           }`}
         >
           <div className="flex items-start gap-3">
             {gap > 0 ? (
-              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#4A5D23] shrink-0 mt-0.5" />
             ) : gap < 0 ? (
-              <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-[#C77D63] shrink-0 mt-0.5" />
             ) : (
-              <CheckCircle2 className="w-5 h-5 text-slate-400 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#D4A574] shrink-0 mt-0.5" />
             )}
 
             <div>
-              <h3 className="font-bold text-sm sm:text-base text-white">
+              <h3 className="font-bold text-sm sm:text-base text-[#F5F0E6]">
                 {gap > 0
                   ? `Tu es en avance de ${formatFCFA(gap)}.`
                   : gap < 0
                   ? `Tu as ${formatFCFA(Math.abs(gap))} de retard.`
                   : 'Tu es pile au rythme prévu.'}
               </h3>
-              <p className="text-xs text-slate-300 mt-1">
+              <p className="text-xs text-[#F5F0E6]/80 mt-1">
                 {gap > 0
                   ? 'Excellente gestion. Ta rigueur te permet de sécuriser ton fonds plus vite que prévu.'
                   : gap < 0
@@ -207,29 +207,29 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
 
         {/* Recalculated Necessary Daily Amount */}
         {!isCompleted && (
-          <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="bg-[#1A1A1A]/80 border border-[#D4A574]/30 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <span className="text-xs font-semibold text-slate-300 block">
+              <span className="text-xs font-semibold text-[#F5F0E6]/80 block">
                 Nouveau montant quotidien nécessaire
               </span>
-              <p className="text-[11px] text-slate-400 mt-0.5">
+              <p className="text-[11px] text-[#D4A574] mt-0.5">
                 Pour atteindre les {formatFCFA(goalAmount)} d'ici le {formatDateFull(settings.targetDate)} ({daysRemainingToTarget} jours restants)
               </p>
             </div>
             <div className="text-left sm:text-right">
-              <span className="text-xl font-bold font-mono text-emerald-400 block">
+              <span className="text-xl font-bold font-mono text-[#4A5D23] block">
                 {formatFCFA(neededDailyAmount)}
               </span>
-              <span className="text-[10px] text-slate-400 font-medium">/ jour</span>
+              <span className="text-[10px] text-[#D4A574] font-medium">/ jour</span>
             </div>
           </div>
         )}
       </div>
 
       {/* Important Rule Banner */}
-      <div className="p-4 rounded-2xl bg-slate-900/50 border border-slate-800 text-xs text-slate-400 space-y-1.5">
+      <div className="p-4 rounded-2xl bg-slate-900/50 border border-[#D4A574]/30 text-xs text-[#D4A574] space-y-1.5">
         <div className="flex items-center gap-2 text-slate-200 font-semibold">
-          <Calendar className="w-4 h-4 text-emerald-400" />
+          <Calendar className="w-4 h-4 text-[#4A5D23]" />
           <span>Cadre de l'objectif</span>
         </div>
         <p>
@@ -243,7 +243,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       {/* Action */}
       <button
         onClick={onOpenContributionModal}
-        className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-emerald-950/40 cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-[#F5F0E6] font-bold py-3.5 px-4 text-sm shadow-lg shadow-emerald-950/40 cursor-pointer"
       >
         Ajouter une cotisation maintenant
       </button>
