@@ -54,7 +54,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
           <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
             Progression globale des paliers
           </span>
-          <span className="text-xs font-mono text-emerald-400 font-bold">
+          <span className="text-xs font-mono text-[#D4A853] font-bold">
             {formatFCFA(totalSaved)}
           </span>
         </div>
@@ -63,7 +63,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
         <div className="relative pt-2 pb-1">
           <div className="h-2 w-full bg-slate-950 rounded-full overflow-hidden border border-slate-800">
             <div
-              className="h-full bg-gradient-to-r from-emerald-500 via-teal-400 to-amber-400 transition-all duration-500"
+              className="h-full bg-[#D4A853] transition-all duration-500"
               style={{
                 width: `${Math.min(100, (achievedCount / milestones.length) * 100)}%`,
               }}
@@ -92,7 +92,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
               }}
               className={`rounded-2xl border p-4 sm:p-5 transition-all ${
                 milestone.achieved
-                  ? 'bg-slate-900/90 border-emerald-500/30 cursor-pointer hover:border-emerald-500/60'
+                  ? 'bg-slate-900/90 border-[#D4A853]/30 cursor-pointer hover:border-[#D4A853]/60'
                   : isNextTarget
                   ? 'bg-slate-900/95 border-amber-500/40 shadow-lg shadow-amber-950/20'
                   : 'bg-slate-950/60 border-slate-800/80 opacity-75'
@@ -103,7 +103,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                   <div
                     className={`p-2.5 rounded-xl shrink-0 mt-0.5 ${
                       milestone.achieved
-                        ? 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                        ? 'bg-[#D4A853]/15 text-[#D4A853] border border-[#D4A853]/30'
                         : isNextTarget
                         ? 'bg-amber-500/15 text-amber-400 border border-amber-500/30'
                         : 'bg-slate-800 text-slate-500'
@@ -128,7 +128,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                         {milestone.label}
                       </h3>
                       {milestone.achieved && (
-                        <span className="text-[10px] uppercase font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                        <span className="text-[10px] uppercase font-bold text-[#D4A853] bg-[#D4A853]/10 px-2 py-0.5 rounded-md border border-[#D4A853]/20">
                           Validé
                         </span>
                       )}
@@ -153,7 +153,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                   <span
                     className={`text-base sm:text-lg font-bold font-mono ${
                       milestone.achieved
-                        ? 'text-emerald-400'
+                        ? 'text-[#D4A853]'
                         : isNextTarget
                         ? 'text-amber-300'
                         : 'text-slate-400'
@@ -173,7 +173,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
 
       <button
         onClick={onOpenContributionModal}
-        className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-emerald-950/40 cursor-pointer"
+        className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#D4A853] hover:bg-[#B8956E] text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-[#D4A853]/40 cursor-pointer"
       >
         Cotiser vers le prochain palier
       </button>

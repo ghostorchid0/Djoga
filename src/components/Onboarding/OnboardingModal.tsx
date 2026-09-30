@@ -43,19 +43,19 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-md p-4 animate-in fade-in duration-300">
       <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
         {/* Glow */}
-        <div className="absolute -top-16 -right-16 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#D4A853]/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* Step indicator */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
-            <div className="p-2 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400">
+            <div className="p-2 rounded-xl bg-[#D4A853]/15 border border-[#D4A853]/30 text-[#D4A853]">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
               <span className="text-xs uppercase font-extrabold tracking-wider text-slate-400 block">
                 SECURITY FUND
               </span>
-              <span className="text-xs text-emerald-400 font-semibold">
+              <span className="text-xs text-[#D4A853] font-semibold">
                 Configuration initiale
               </span>
             </div>
@@ -66,7 +66,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <div
                 key={s}
                 className={`h-1.5 rounded-full transition-all ${
-                  step === s ? 'w-6 bg-emerald-400' : step > s ? 'w-2 bg-emerald-600' : 'w-2 bg-slate-800'
+                  step === s ? 'w-6 bg-[#D4A853]' : step > s ? 'w-2 bg-[#D4A853]' : 'w-2 bg-slate-800'
                 }`}
               />
             ))}
@@ -77,7 +77,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
         {step === 1 && (
           <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-200">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#D4A853] uppercase tracking-wider">
                 Étape 1 sur 3
               </span>
               <h2 className="text-lg font-bold text-white">
@@ -94,7 +94,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={goalAmount}
                   onChange={(e) => setGoalAmount(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 pr-16"
+                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="5000"
                   step="5000"
                 />
@@ -110,7 +110,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                     onClick={() => setGoalAmount(amt)}
                     className={`flex-1 py-1.5 rounded-lg border text-xs font-medium transition cursor-pointer ${
                       goalAmount === amt
-                        ? 'bg-emerald-500/20 border-emerald-500 text-emerald-300'
+                        ? 'bg-[#D4A853]/20 border-[#D4A853] text-[#D4A853]'
                         : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
                     }`}
                   >
@@ -124,7 +124,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 cursor-pointer transition"
+                className="w-full py-3.5 rounded-xl bg-[#D4A853] hover:bg-[#D4A853] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#D4A853]/40 cursor-pointer transition"
               >
                 <span>Continuer</span>
                 <ArrowRight className="w-4 h-4" />
@@ -137,7 +137,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
         {step === 2 && (
           <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-200">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#D4A853] uppercase tracking-wider">
                 Étape 2 sur 3
               </span>
               <h2 className="text-lg font-bold text-white">
@@ -154,7 +154,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={dailyTarget}
                   onChange={(e) => setDailyTarget(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 pr-16"
+                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="200"
                   step="100"
                 />
@@ -170,7 +170,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                     onClick={() => setDailyTarget(amt)}
                     className={`flex-1 py-1.5 rounded-lg border text-xs font-medium transition cursor-pointer ${
                       dailyTarget === amt
-                        ? 'bg-emerald-500/20 border-emerald-500 text-emerald-300'
+                        ? 'bg-[#D4A853]/20 border-[#D4A853] text-[#D4A853]'
                         : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
                     }`}
                   >
@@ -191,7 +191,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(3)}
-                className="flex-1 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 cursor-pointer transition"
+                className="flex-1 py-3.5 rounded-xl bg-[#D4A853] hover:bg-[#D4A853] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#D4A853]/40 cursor-pointer transition"
               >
                 <span>Continuer</span>
                 <ArrowRight className="w-4 h-4" />
@@ -204,7 +204,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
         {step === 3 && (
           <div className="space-y-4 animate-in fade-in slide-in-from-right-4 duration-200">
             <div className="space-y-1">
-              <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-[#D4A853] uppercase tracking-wider">
                 Étape 3 sur 3
               </span>
               <h2 className="text-lg font-bold text-white">Quand commences-tu ?</h2>
@@ -219,7 +219,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-emerald-500 pl-10"
+                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#D4A853] pl-10"
                 />
                 <Calendar className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
@@ -227,7 +227,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
 
             {/* Discipline Pledge */}
             <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
-              <div className="font-semibold text-emerald-400 flex items-center gap-1.5">
+              <div className="font-semibold text-[#D4A853] flex items-center gap-1.5">
                 <Target className="w-3.5 h-3.5" />
                 <span>Règle d'or de sanctuarisation</span>
               </div>
@@ -248,7 +248,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                 type="button"
                 disabled={submitting}
                 onClick={handleFinish}
-                className="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/40 cursor-pointer transition disabled:opacity-50"
+                className="flex-1 py-3.5 rounded-xl bg-[#D4A853] hover:bg-[#B8956E] text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-[#D4A853]/40 cursor-pointer transition disabled:opacity-50"
               >
                 <Check className="w-4 h-4 stroke-[3]" />
                 <span>COMMENCER MON ÉPARGNE</span>

@@ -31,7 +31,7 @@ export const OfflineIndicator: React.FC = () => {
 
   if (showRestoredNotice) {
     return (
-      <div className="fixed bottom-20 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center gap-2.5 rounded-xl bg-emerald-500/95 text-slate-950 font-semibold px-4 py-2.5 text-xs shadow-lg backdrop-blur-xs animate-in slide-in-from-bottom-2">
+      <div className="fixed bottom-20 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-50 flex items-center gap-2.5 rounded-xl bg-[#D4A853]/95 text-white font-semibold px-4 py-2.5 text-xs shadow-lg animate-in slide-in-from-bottom-2">
         <Wifi className="w-4 h-4 shrink-0" />
         <span>Connexion rétablie · Données synchronisées</span>
       </div>

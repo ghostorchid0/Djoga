@@ -41,10 +41,10 @@ export function useSavings() {
   useEffect(() => {
     if (settings.theme === 'light') {
       document.documentElement.classList.remove('dark');
-      document.body.className = 'bg-slate-50 text-slate-900 antialiased selection:bg-emerald-500/20 selection:text-emerald-800';
+      document.body.className = 'bg-slate-50 text-slate-900 antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
     } else {
       document.documentElement.classList.add('dark');
-      document.body.className = 'bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-300';
+      document.body.className = 'bg-slate-950 text-slate-100 antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
     }
   }, [settings.theme]);
 

@@ -38,7 +38,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-            <History className="w-5 h-5 text-emerald-400" />
+            <History className="w-5 h-5 text-[#D4A853]" />
             <span>HISTORIQUE</span>
           </h1>
           <p className="text-xs text-slate-400 mt-0.5">
@@ -48,7 +48,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
 
         <button
           onClick={onOpenContributionModal}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow transition cursor-pointer"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#D4A853] hover:bg-[#D4A853] text-white font-semibold text-xs shadow transition cursor-pointer"
         >
           <Plus className="w-4 h-4" />
           <span>Nouvelle</span>
@@ -88,7 +88,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Rechercher par note, montant, date..."
-              className="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-3.5 py-2 pl-9 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-emerald-500"
+              className="w-full bg-slate-900/80 border border-slate-800 rounded-xl px-3.5 py-2 pl-9 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#D4A853]"
             />
             <Search className="w-3.5 h-3.5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
           </div>
@@ -112,7 +112,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
           <p className="text-sm text-slate-400">Aucune cotisation pour cette sélection.</p>
           <button
             onClick={onOpenContributionModal}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 text-xs font-semibold text-emerald-400 hover:bg-slate-750 transition cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-800 text-xs font-semibold text-[#D4A853] hover:bg-slate-750 transition cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Ajouter une cotisation</span>
@@ -138,7 +138,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
 
               <div className="flex items-center gap-3">
                 <div className="text-right">
-                  <span className="text-sm sm:text-base font-extrabold font-mono text-emerald-400 block">
+                  <span className="text-sm sm:text-base font-extrabold font-mono text-[#D4A853] block">
                     +{formatFCFA(item.amount)}
                   </span>
                 </div>

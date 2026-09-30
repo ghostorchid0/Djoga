@@ -108,7 +108,7 @@ export default function App() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-950 text-slate-100">
         <div className="flex flex-col items-center gap-3">
-          <div className="w-10 h-10 border-3 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin" />
+          <div className="w-10 h-10 border-3 border-[#D4A853]/20 border-t-[#D4A853] rounded-full animate-spin" />
           <span className="text-xs uppercase tracking-widest text-slate-400 font-bold">
             Djoga...
           </span>
@@ -390,8 +390,8 @@ export default function App() {
 
       {/* Discrete Toast Notice */}
       {toastMessage && (
-        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-xl bg-slate-900/95 border border-emerald-500/40 text-emerald-300 font-medium px-4 py-2.5 text-xs shadow-2xl backdrop-blur-md animate-in slide-in-from-top-3">
-          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+        <div className="fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 rounded-xl bg-[#0D4F4C]/95 border border-[#D4A853]/40 text-[#D4A853] font-medium px-4 py-2.5 text-xs shadow-2xl animate-in slide-in-from-top-3">
+          <CheckCircle2 className="w-4 h-4 text-[#D4A853] shrink-0" />
           <span>{toastMessage}</span>
         </div>
       )}

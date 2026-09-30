@@ -91,7 +91,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-            <CalendarIcon className="w-5 h-5 text-emerald-400" />
+            <CalendarIcon className="w-5 h-5 text-[#D4A853]" />
             <span>CALENDRIER</span>
           </h1>
           <p className="text-xs text-slate-400 mt-0.5">
@@ -135,7 +135,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         {/* Legend */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 text-[11px]">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-md bg-emerald-500 shadow-xs shadow-emerald-500/50" />
+            <span className="w-3 h-3 rounded-md bg-[#D4A853] shadow-xs shadow-[#D4A853]/50" />
             <span className="text-slate-300">Objectif atteint (1 000 F)</span>
           </div>
           <div className="flex items-center gap-2">
@@ -187,7 +187,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
 
             let badgeColor = 'bg-slate-800/40 text-slate-400 border border-slate-800/80';
             if (status === 'target') {
-              badgeColor = 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 font-semibold';
+              badgeColor = 'bg-[#D4A853]/20 text-[#D4A853] border border-[#D4A853]/40 font-semibold';
             } else if (status === 'above') {
               badgeColor = 'bg-blue-500/20 text-blue-300 border border-blue-500/40 font-semibold';
             } else if (status === 'below') {
@@ -200,7 +200,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
                 type="button"
                 onClick={() => setSelectedDate(dateStr)}
                 className={`h-11 sm:h-13 rounded-xl p-1 text-center flex flex-col items-center justify-between transition-all cursor-pointer relative ${badgeColor} ${
-                  isSelected ? 'ring-2 ring-emerald-400 ring-offset-2 ring-offset-slate-950 scale-105 z-10' : 'hover:scale-[1.02]'
+                  isSelected ? 'ring-2 ring-[#D4A853] ring-offset-2 ring-offset-slate-950 scale-105 z-10' : 'hover:scale-[1.02]'
                 } ${isToday ? 'outline-1 outline-slate-400' : ''}`}
               >
                 <div className="w-full flex items-center justify-between px-1">
@@ -209,7 +209,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
                     <span
                       className={`w-1.5 h-1.5 rounded-full ${
                         status === 'target'
-                          ? 'bg-emerald-400'
+                          ? 'bg-[#D4A853]'
                           : status === 'above'
                           ? 'bg-blue-400'
                           : 'bg-amber-400'
@@ -235,13 +235,13 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
               {formatDateFull(selectedDate)}
             </h3>
             <p className="text-xs text-slate-400">
-              Total cotisé : <strong className="text-emerald-400 font-mono">{formatFCFA(selectedDayTotal)}</strong>
+              Total cotisé : <strong className="text-[#D4A853] font-mono">{formatFCFA(selectedDayTotal)}</strong>
             </p>
           </div>
 
           <button
             onClick={() => onAddForDate(selectedDate)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs shadow transition cursor-pointer"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#D4A853] hover:bg-[#D4A853] text-white font-semibold text-xs shadow transition cursor-pointer"
           >
             <Plus className="w-3.5 h-3.5" />
             <span>Cotiser ce jour</span>

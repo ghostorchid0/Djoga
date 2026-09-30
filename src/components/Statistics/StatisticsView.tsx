@@ -83,7 +83,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
       {/* Header */}
       <div>
         <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
-          <BarChart3 className="w-5 h-5 text-emerald-400" />
+          <BarChart3 className="w-5 h-5 text-[#D4A853]" />
           <span>STATISTIQUES</span>
         </h1>
         <p className="text-xs text-slate-400 mt-0.5">
@@ -95,12 +95,12 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
       <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-4 h-4 text-emerald-400" />
+            <TrendingUp className="w-4 h-4 text-[#D4A853]" />
             <h2 className="text-xs font-bold uppercase tracking-wider text-slate-300">
               Évolution du fonds d'épargne
             </h2>
           </div>
-          <span className="text-xs font-mono text-emerald-400 font-bold">
+          <span className="text-xs font-mono text-[#D4A853] font-bold">
             {formatFCFA(totalSaved)}
           </span>
         </div>
@@ -193,7 +193,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
             Total épargné
           </span>
-          <span className="text-xl font-bold font-mono text-emerald-400 mt-1 block">
+          <span className="text-xl font-bold font-mono text-[#D4A853] mt-1 block">
             {formatFCFA(totalSaved)}
           </span>
           <span className="text-[10px] text-slate-400">sur {formatFCFA(settings.goalAmount)}</span>
@@ -266,9 +266,9 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
             <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
               Jours cotisés
             </span>
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <ShieldCheck className="w-4 h-4 text-[#D4A853]" />
           </div>
-          <span className="text-xl font-bold font-mono text-emerald-400 mt-1 block">
+          <span className="text-xl font-bold font-mono text-[#D4A853] mt-1 block">
             {totalDaysContributed} <span className="text-xs font-normal text-slate-400">jours</span>
           </span>
           <span className="text-[10px] text-slate-400">présence active</span>
