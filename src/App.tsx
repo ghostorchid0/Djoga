@@ -425,6 +425,23 @@ export default function App() {
                 <Trophy className="w-5 h-5" />
                 <span className="text-sm font-semibold">Paliers</span>
               </button>
+
+              <div className="border-t border-[#1A6B66]/30 pt-2 mt-2">
+                <button
+                  onClick={() => {
+                    setIsSettingsOpen(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer text-white/80 hover:bg-white/10"
+                >
+                  <SettingsIcon className="w-5 h-5" />
+                  <span className="text-sm font-semibold">Paramètres</span>
+                </button>
+
+                <div className="px-4 py-3">
+                  <PWAInstallButton variant="mobile" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

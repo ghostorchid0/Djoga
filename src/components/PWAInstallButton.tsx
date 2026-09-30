@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { usePWAInstall } from '../hooks/usePWAInstall';
 import { Download, Share, X, CheckCircle2 } from 'lucide-react';
 
-export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' }> = ({ variant = 'header' }) => {
+export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' | 'mobile' }> = ({ variant = 'header' }) => {
   const { isInstallable, isInstalled, isIOS, install } = usePWAInstall();
   const [showIOSGuide, setShowIOSGuide] = useState(false);
 
@@ -10,9 +10,17 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' }> = (
   if (isInstalled) {
     if (variant === 'settings') {
       return (
-        <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium bg-emerald-500/10 px-3 py-2 rounded-lg border border-emerald-500/20">
-          <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+        <div className="flex items-center gap-2 text-xs text-[#D4A853] font-medium bg-[#D4A853]/10 px-3 py-2 rounded-lg border border-[#D4A853]/20">
+          <CheckCircle2 className="w-4 h-4 text-[#D4A853] shrink-0" />
           <span>Application déjà installée sur cet appareil</span>
+        </div>
+      );
+    }
+    if (variant === 'mobile') {
+      return (
+        <div className="flex items-center gap-2 text-xs text-[#D4A853] font-medium">
+          <CheckCircle2 className="w-4 h-4 text-[#D4A853] shrink-0" />
+          <span>Installée</span>
         </div>
       );
     }
@@ -26,8 +34,10 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' }> = (
         onClick={install}
         className={
           variant === 'settings'
-            ? 'w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 px-4 py-3 text-sm font-semibold text-white shadow-md active:scale-[0.98] transition cursor-pointer'
-            : 'flex items-center gap-1.5 rounded-lg bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 px-2.5 py-1.5 text-xs font-semibold text-emerald-400 transition cursor-pointer'
+            ? 'w-full flex items-center justify-center gap-2 rounded-xl bg-[#D4A853] hover:bg-[#B8956E] px-4 py-3 text-sm font-semibold text-white shadow-md active:scale-[0.98] transition cursor-pointer'
+            : variant === 'mobile'
+            ? 'w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer text-white/80 hover:bg-white/10'
+            : 'flex items-center gap-1.5 rounded-lg bg-[#D4A853]/15 hover:bg-[#D4A853]/25 border border-[#D4A853]/30 px-2.5 py-1.5 text-xs font-semibold text-[#D4A853] transition cursor-pointer'
         }
       >
         <Download className="w-3.5 h-3.5 shrink-0" />
@@ -45,6 +55,8 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' }> = (
           className={
             variant === 'settings'
               ? 'w-full flex items-center justify-center gap-2 rounded-xl bg-slate-800 hover:bg-slate-750 border border-slate-700 px-4 py-3 text-sm font-medium text-slate-200 active:scale-[0.98] transition cursor-pointer'
+              : variant === 'mobile'
+              ? 'w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer text-white/80 hover:bg-white/10'
               : 'flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800/80 px-2.5 py-1.5 text-xs font-medium text-slate-300 hover:text-white transition cursor-pointer'
           }
         >
@@ -67,15 +79,15 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' }> = (
               </div>
               <ol className="mt-4 space-y-3 text-sm text-slate-300">
                 <li className="flex items-start gap-2.5">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">1</span>
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D4A853]/20 text-xs font-bold text-[#D4A853]">1</span>
                   <span>Appuie sur le bouton <strong>Partager</strong> <Share className="inline w-3.5 h-3.5 mx-0.5" /> dans la barre Safari.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">2</span>
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D4A853]/20 text-xs font-bold text-[#D4A853]">2</span>
                   <span>Fais défiler vers le bas et choisis <strong>Sur l'écran d'accueil</strong>.</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-500/20 text-xs font-bold text-emerald-400">3</span>
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D4A853]/20 text-xs font-bold text-[#D4A853]">3</span>
                   <span>Appuie sur <strong>Ajouter</strong> en haut à droite.</span>
                 </li>
               </ol>
