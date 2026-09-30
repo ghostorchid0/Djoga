@@ -98,18 +98,18 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/80 backdrop-blur-xs p-0 sm:p-4">
       <div
-        className="w-full max-w-md bg-[#1A1A1A] border border-[#D4A574]/30 rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
+        className="w-full max-w-md bg-white border border-[#D4A574]/30 rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
         role="dialog"
         aria-modal="true"
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-[#D4A574]/30">
+        <div className="flex items-center justify-between pb-3 border-b border-[#D4A574]/20">
           <div className="flex items-center gap-2">
             <div className="p-2 rounded-lg bg-[#D4A853]/10 text-[#D4A853]">
               <Banknote className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-[#F5F0E6]">
+              <h2 className="text-base font-bold text-[#1A1A1A]">
                 {editingContribution ? 'Modifier la cotisation' : 'Ajouter une cotisation'}
               </h2>
               <p className="text-xs text-[#D4A574]">Fonds de sécurité personnel</p>
@@ -117,7 +117,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-[#D4A574] hover:text-[#F5F0E6] hover:bg-[#3D2B1F]/30 transition cursor-pointer"
+            className="p-1.5 rounded-lg text-[#D4A574] hover:text-[#1A1A1A] hover:bg-[#D4A574]/10 transition cursor-pointer"
             aria-label="Fermer"
           >
             <X className="w-5 h-5" />
@@ -172,7 +172,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={customAmountStr}
                 onChange={handleCustomInputChange}
                 placeholder="Ex: 3 000"
-                className="w-full bg-[#1A1A1A] border border-[#D4A574]/30 rounded-xl px-4 py-3 text-lg font-mono font-bold text-[#F5F0E6] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pr-16"
+                className="w-full bg-[#FAF8F5] border border-[#D4A574]/30 rounded-xl px-4 py-3 text-lg font-mono font-bold text-[#1A1A1A] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pr-16"
               />
               <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-[#D4A574] pointer-events-none">
                 FCFA
@@ -190,7 +190,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full bg-[#1A1A1A] border border-[#D4A574]/30 rounded-xl px-4 py-2.5 text-sm text-[#F5F0E6] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
+                className="w-full bg-[#FAF8F5] border border-[#D4A574]/30 rounded-xl px-4 py-2.5 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
               />
               <Calendar className="w-4 h-4 text-[#D4A574] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
@@ -207,7 +207,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Ex : Épargne du jour, reliquat marché..."
-                className="w-full bg-[#1A1A1A] border border-[#D4A574]/30 rounded-xl px-4 py-2.5 text-sm text-[#F5F0E6] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
+                className="w-full bg-[#FAF8F5] border border-[#D4A574]/30 rounded-xl px-4 py-2.5 text-sm text-[#1A1A1A] focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
               />
               <FileText className="w-4 h-4 text-[#D4A574] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
