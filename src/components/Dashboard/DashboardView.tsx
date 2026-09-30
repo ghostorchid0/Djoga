@@ -9,7 +9,6 @@ import {
   CalendarCheck2,
   Wallet,
   Coins,
-  ShieldAlert,
   ChevronRight,
   Sparkles,
   ArrowUpRight,
@@ -47,16 +46,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
   return (
     <div className="space-y-5 pb-6 animate-in fade-in duration-150">
-      {/* Strict Financial Discipline Banner */}
-      <div className="bg-gradient-to-r bg-[#D4A853]/5 text-white/5 border border-[#6366F1]/20 rounded-lg px-4 py-3 flex items-center justify-between text-xs text-gray-600">
-        <div className="flex items-center gap-2">
-          <ShieldAlert className="w-4 h-4 text-[#6366F1] shrink-0" />
-          <span className="truncate">
-            <strong className="text-[#0D4F4C]">Règle de fer :</strong> Ce fonds est exclusivement dédié à ta sécurité financière personnelle (200 000 FCFA).
-          </span>
-        </div>
-      </div>
-
       {/* Main Large Progress Card */}
       <ProgressCard
         calculations={calculations}
