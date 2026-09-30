@@ -1,0 +1,6 @@
+{
+  "name": "Security Fund - Suivi d'Épargne Personnelle",
+  "description": "Application PWA mobile-first de suivi d'épargne personnelle de 200 000 FCFA avec fonctionnement hors ligne et IndexedDB.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
