@@ -98,26 +98,26 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4">
       <div
-        className="w-full max-w-md bg-white border border-[#E2E8F0] rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
+        className="w-full max-w-md bg-white border border-[#1A6B66]/30 rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
         role="dialog"
         aria-modal="true"
       >
         {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+        <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]/30">
           <div className="flex items-center gap-2">
-            <div className="p-2 rounded-xl bg-gradient-to-br from-[#6366F1]/10 to-[#EC4899]/10 text-[#6366F1]">
+            <div className="p-2 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 text-[#6366F1]">
               <Banknote className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-[#0F172A]">
+              <h2 className="text-base font-bold text-[#0D4F4C]">
                 {editingContribution ? 'Modifier la cotisation' : 'Ajouter une cotisation'}
               </h2>
-              <p className="text-xs text-[#64748B]">Fonds de sécurité personnel</p>
+              <p className="text-xs text-[#1A6B66]/80">Fonds de sécurité personnel</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] transition cursor-pointer"
+            className="p-1.5 rounded-lg text-[#1A6B66]/80 hover:text-[#0D4F4C] hover:bg-[#F1F5F9] transition cursor-pointer"
             aria-label="Fermer"
           >
             <X className="w-5 h-5" />
@@ -142,8 +142,8 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                     onClick={() => handleQuickSelect(val)}
                     className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                       isSelected
-                        ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
-                        : 'bg-[#F8FAFC] border-[#E2E8F0] text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0F172A]'
+                        ? 'bg-gradient-to-r from-[#D4A853] to-[#B8956E] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
+                        : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
                     }`}
                   >
                     {val.toLocaleString('fr-FR')} F
@@ -155,8 +155,8 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 onClick={handleCustomModeToggle}
                 className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                   isCustomMode
-                    ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
-                    : 'bg-[#F8FAFC] border-[#E2E8F0] text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0F172A]'
+                    ? 'bg-gradient-to-r from-[#D4A853] to-[#B8956E] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
+                    : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
                 }`}
               >
                 Autre montant
@@ -172,9 +172,9 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={customAmountStr}
                 onChange={handleCustomInputChange}
                 placeholder="Ex: 3 000"
-                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-3 text-lg font-mono font-bold text-[#0F172A] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pr-16"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-3 text-lg font-mono font-bold text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pr-16"
               />
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-[#64748B] pointer-events-none">
+              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-[#1A6B66]/80 pointer-events-none">
                 FCFA
               </span>
             </div>
@@ -182,7 +182,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
 
           {/* Date Picker */}
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-[#64748B] mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#1A6B66]/80 mb-1.5">
               Date
             </label>
             <div className="relative">
@@ -190,15 +190,15 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0F172A] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
               />
-              <Calendar className="w-4 h-4 text-[#64748B] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Calendar className="w-4 h-4 text-[#1A6B66]/80 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
           {/* Optional Note */}
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-[#64748B] mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-[#1A6B66]/80 mb-1.5">
               Note (facultatif)
             </label>
             <div className="relative">
@@ -207,9 +207,9 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Ex : Épargne du jour, reliquat marché..."
-                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl px-4 py-2.5 text-sm text-[#0F172A] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
               />
-              <FileText className="w-4 h-4 text-[#64748B] absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <FileText className="w-4 h-4 text-[#1A6B66]/80 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
@@ -225,7 +225,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
             <button
               type="submit"
               disabled={submitting}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#6366F1] via-[#8B5CF6] to-[#EC4899] hover:from-[#4F46E5] hover:via-[#7C3AED] hover:to-[#DB2777] text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-[#6366F1]/30 active:scale-[0.99] transition cursor-pointer disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A853] via-[#8B5CF6] to-[#B8956E] hover:from-[#4F46E5] hover:via-[#7C3AED] hover:to-[#DB2777] text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-[#6366F1]/30 active:scale-[0.99] transition cursor-pointer disabled:opacity-50"
             >
               <Check className="w-4 h-4" />
               <span>{submitting ? 'ENREGISTREMENT...' : 'ENREGISTRER'}</span>

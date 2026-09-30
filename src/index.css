@@ -5,22 +5,20 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --safe-top: env(safe-area-inset-top, 0px);
 
-    /* Modern Vibrant Palette */
-    --color-primary: #6366F1;
-    --color-primary-light: #818CF8;
-    --color-primary-dark: #4F46E5;
-    --color-secondary: #EC4899;
-    --color-accent: #F59E0B;
-    --color-success: #10B981;
-    --color-warning: #F59E0B;
-    --color-danger: #EF4444;
-    --color-bg: #F8FAFC;
-    --color-bg-alt: #F1F5F9;
-    --color-surface: #FFFFFF;
-    --color-text: #0F172A;
-    --color-text-muted: #64748B;
-    --color-border: #E2E8F0;
-    --color-border-light: #F1F5F9;
+    /* Logo-inspired color palette */
+    --color-forest: #0D4F4C;
+    --color-forest-light: #1A6B66;
+    --color-forest-dark: #0A3D3A;
+    --color-gold: #D4A853;
+    --color-gold-light: #E8B86D;
+    --color-gold-dark: #B8956E;
+    --color-white: #FFFFFF;
+    --color-off-white: #F8FAF8;
+    --color-cream: #F0F4F2;
+    --color-text: #0D4F4C;
+    --color-text-muted: #1A6B66;
+    --color-border: #0D4F4C;
+    --color-border-light: #1A6B66;
   }
 
   html {
