@@ -28,6 +28,8 @@ import {
   Flame,
   Shield,
   CheckCircle2,
+  Menu,
+  X,
 } from 'lucide-react';
 
 type TabType =
@@ -59,6 +61,7 @@ export default function App() {
   const [editingContribution, setEditingContribution] = useState<Contribution | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [targetDateForAdd, setTargetDateForAdd] = useState<string | undefined>(undefined);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Check daily reminder trigger
   useEffect(() => {
@@ -343,50 +346,89 @@ export default function App() {
             <span className="text-[10px]">Calendrier</span>
           </button>
 
-          {/* 5. Historique / Plus */}
+          {/* 5. Menu Hamburger */}
           <button
-            onClick={() => setActiveTab('history')}
+            onClick={() => setIsMobileMenuOpen(true)}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'history' || activeTab === 'statistics' || activeTab === 'projection' || activeTab === 'milestones'
-                ? 'text-[#D4A853] font-bold'
-                : 'text-white/80'
+              isMobileMenuOpen ? 'text-[#D4A853] font-bold' : 'text-white/80'
             }`}
           >
-            <History className="w-4 h-4" />
-            <span className="text-[10px]">Historique</span>
+            <Menu className="w-4 h-4" />
+            <span className="text-[10px]">Menu</span>
           </button>
         </div>
-
-        {/* Secondary quick tabs on mobile for deep views */}
-        {(activeTab === 'statistics' || activeTab === 'projection' || activeTab === 'milestones' || activeTab === 'history') && (
-          <div className="flex items-center justify-center gap-1.5 pt-1.5 border-t border-[#1A6B66]/30 mt-1">
-            <button
-              onClick={() => setActiveTab('history')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'history' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/60'}`}
-            >
-              Historique
-            </button>
-            <button
-              onClick={() => setActiveTab('statistics')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
-            >
-              Stats
-            </button>
-            <button
-              onClick={() => setActiveTab('projection')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
-            >
-              Projection
-            </button>
-            <button
-              onClick={() => setActiveTab('milestones')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
-            >
-              Paliers
-            </button>
-          </div>
-        )}
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="absolute bottom-0 left-0 right-0 bg-[#0D4F4C] border-t border-[#1A6B66]/30 rounded-t-3xl p-4 pb-[calc(1rem+env(safe-area-inset-bottom,0px))] animate-in slide-in-from-bottom-4 duration-200">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-sm font-bold text-white uppercase tracking-wider">Menu</h2>
+              <button
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 rounded-lg text-white/80 hover:text-white hover:bg-white/10 transition cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="space-y-2">
+              <button
+                onClick={() => {
+                  setActiveTab('history');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer ${
+                  activeTab === 'history' ? 'bg-[#D4A853] text-white' : 'text-white/80 hover:bg-white/10'
+                }`}
+              >
+                <History className="w-5 h-5" />
+                <span className="text-sm font-semibold">Historique</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setActiveTab('statistics');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer ${
+                  activeTab === 'statistics' ? 'bg-[#D4A853] text-white' : 'text-white/80 hover:bg-white/10'
+                }`}
+              >
+                <BarChart3 className="w-5 h-5" />
+                <span className="text-sm font-semibold">Statistiques</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setActiveTab('projection');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer ${
+                  activeTab === 'projection' ? 'bg-[#D4A853] text-white' : 'text-white/80 hover:bg-white/10'
+                }`}
+              >
+                <Compass className="w-5 h-5" />
+                <span className="text-sm font-semibold">Projection</span>
+              </button>
+
+              <button
+                onClick={() => {
+                  setActiveTab('milestones');
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer ${
+                  activeTab === 'milestones' ? 'bg-[#D4A853] text-white' : 'text-white/80 hover:bg-white/10'
+                }`}
+              >
+                <Trophy className="w-5 h-5" />
+                <span className="text-sm font-semibold">Paliers</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Discrete Toast Notice */}
       {toastMessage && (
