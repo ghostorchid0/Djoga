@@ -86,13 +86,13 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <BarChart3 className="w-5 h-5 text-[#D4A853]" />
           <span>STATISTIQUES</span>
         </h1>
-        <p className="text-xs text-slate-400 mt-0.5">
+        <p className="text-xs text-gray-600 mt-0.5">
           Indicateurs financiers de discipline et métriques de performance
         </p>
       </div>
 
       {/* Evolution Chart */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl">
+      <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4 sm:p-5 shadow-xl">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-[#D4A853]" />
@@ -106,7 +106,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
         </div>
 
         {chartPoints.length < 2 ? (
-          <div className="h-44 flex flex-col items-center justify-center text-center text-xs text-slate-400 bg-slate-950/40 rounded-xl p-4 border border-slate-800/80">
+          <div className="h-44 flex flex-col items-center justify-center text-center text-xs text-gray-600 bg-black/40 rounded-xl p-4 border border-[#1A6B66]/80">
             <p>Ajoute des cotisations sur plusieurs jours pour observer ta courbe de croissance.</p>
           </div>
         ) : (
@@ -178,7 +178,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
               })}
             </svg>
 
-            <div className="flex justify-between text-[11px] text-slate-400 mt-2 px-1">
+            <div className="flex justify-between text-[11px] text-gray-600 mt-2 px-1">
               <span>{formatDateFrench(chartPoints[0].date)}</span>
               <span>{formatDateFrench(chartPoints[chartPoints.length - 1].date)}</span>
             </div>
@@ -189,53 +189,53 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
       {/* Grid of Key Statistics (from prompt section 8) */}
       <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
         {/* Total épargné */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Total épargné
           </span>
           <span className="text-xl font-bold font-mono text-[#D4A853] mt-1 block">
             {formatFCFA(totalSaved)}
           </span>
-          <span className="text-[10px] text-slate-400">sur {formatFCFA(settings.goalAmount)}</span>
+          <span className="text-[10px] text-gray-600">sur {formatFCFA(settings.goalAmount)}</span>
         </div>
 
         {/* Moyenne par jour */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par jour
           </span>
           <span className="text-xl font-bold font-mono text-white mt-1 block">
             {formatFCFA(realDailyAverage)}
           </span>
-          <span className="text-[10px] text-slate-400">rythme moyen continu</span>
+          <span className="text-[10px] text-gray-600">rythme moyen continu</span>
         </div>
 
         {/* Moyenne par semaine */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par semaine
           </span>
           <span className="text-xl font-bold font-mono text-white mt-1 block">
             {formatFCFA(weeklyAverage)}
           </span>
-          <span className="text-[10px] text-slate-400">vitesse hebdomadaire</span>
+          <span className="text-[10px] text-gray-600">vitesse hebdomadaire</span>
         </div>
 
         {/* Moyenne par mois */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
-          <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
+          <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par mois
           </span>
           <span className="text-xl font-bold font-mono text-white mt-1 block">
             {formatFCFA(monthlyAverage)}
           </span>
-          <span className="text-[10px] text-slate-400">projection 30 jours</span>
+          <span className="text-[10px] text-gray-600">projection 30 jours</span>
         </div>
 
         {/* Meilleure cotisation */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
               Meilleure cotisation
             </span>
             <Trophy className="w-4 h-4 text-amber-400" />
@@ -243,49 +243,49 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <span className="text-xl font-bold font-mono text-amber-300 mt-1 block">
             {formatFCFA(bestSingleContribution)}
           </span>
-          <span className="text-[10px] text-slate-400">record en 1 versement</span>
+          <span className="text-[10px] text-gray-600">record en 1 versement</span>
         </div>
 
         {/* Meilleure série */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
               Meilleure série
             </span>
             <Flame className="w-4 h-4 text-orange-400" />
           </div>
           <span className="text-xl font-bold font-mono text-orange-400 mt-1 block">
-            {bestStreak} <span className="text-xs font-normal text-slate-400">jours</span>
+            {bestStreak} <span className="text-xs font-normal text-gray-600">jours</span>
           </span>
-          <span className="text-[10px] text-slate-400">série record (actuelle: {currentStreak} j)</span>
+          <span className="text-[10px] text-gray-600">série record (actuelle: {currentStreak} j)</span>
         </div>
 
         {/* Jours cotisés */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
               Jours cotisés
             </span>
             <ShieldCheck className="w-4 h-4 text-[#D4A853]" />
           </div>
           <span className="text-xl font-bold font-mono text-[#D4A853] mt-1 block">
-            {totalDaysContributed} <span className="text-xs font-normal text-slate-400">jours</span>
+            {totalDaysContributed} <span className="text-xs font-normal text-gray-600">jours</span>
           </span>
-          <span className="text-[10px] text-slate-400">présence active</span>
+          <span className="text-[10px] text-gray-600">présence active</span>
         </div>
 
         {/* Jours sans cotisation */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4">
+        <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
               Jours sans cotisation
             </span>
-            <CalendarX className="w-4 h-4 text-slate-500" />
+            <CalendarX className="w-4 h-4 text-gray-500" />
           </div>
           <span className="text-xl font-bold font-mono text-slate-300 mt-1 block">
-            {totalDaysWithoutContribution} <span className="text-xs font-normal text-slate-400">jours</span>
+            {totalDaysWithoutContribution} <span className="text-xs font-normal text-gray-600">jours</span>
           </span>
-          <span className="text-[10px] text-slate-400">depuis le lancement</span>
+          <span className="text-[10px] text-gray-600">depuis le lancement</span>
         </div>
       </div>
     </div>

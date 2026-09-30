@@ -38,7 +38,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
             <Trophy className="w-5 h-5 text-amber-400" />
             <span>PALIERS D'ÉPARGNE</span>
           </h1>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <p className="text-xs text-gray-600 mt-0.5">
             Étapes clés vers la sécurisation intégrale de ton fonds
           </p>
         </div>
@@ -49,9 +49,9 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
       </div>
 
       {/* Summary card */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl">
+      <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-5 shadow-xl">
         <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-gray-600">
             Progression globale des paliers
           </span>
           <span className="text-xs font-mono text-[#D4A853] font-bold">
@@ -61,7 +61,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
 
         {/* Multi-step track */}
         <div className="relative pt-2 pb-1">
-          <div className="h-2 w-full bg-slate-950 rounded-full overflow-hidden border border-slate-800">
+          <div className="h-2 w-full bg-black rounded-full overflow-hidden border border-[#1A6B66]">
             <div
               className="h-full bg-[#D4A853] transition-all duration-500"
               style={{
@@ -71,7 +71,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
           </div>
         </div>
 
-        <p className="text-[11px] text-slate-400 mt-2">
+        <p className="text-[11px] text-gray-600 mt-2">
           {remainingAmount <= 0
             ? 'Félicitations exceptionnelles ! Tous les paliers de sécurité sont conquis.'
             : `Plus que ${formatFCFA(remainingAmount)} pour verrouiller l'ensemble des 6 étapes.`}
@@ -92,10 +92,10 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
               }}
               className={`rounded-2xl border p-4 sm:p-5 transition-all ${
                 milestone.achieved
-                  ? 'bg-slate-900/90 border-[#D4A853]/30 cursor-pointer hover:border-[#D4A853]/60'
+                  ? 'bg-[#F0F4F2]/90 border-[#D4A853]/30 cursor-pointer hover:border-[#D4A853]/60'
                   : isNextTarget
-                  ? 'bg-slate-900/95 border-amber-500/40 shadow-lg shadow-amber-950/20'
-                  : 'bg-slate-950/60 border-slate-800/80 opacity-75'
+                  ? 'bg-[#F0F4F2]/95 border-amber-500/40 shadow-lg shadow-amber-950/20'
+                  : 'bg-black/60 border-[#1A6B66]/80 opacity-75'
               }`}
             >
               <div className="flex items-start justify-between gap-3">
@@ -106,7 +106,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                         ? 'bg-[#D4A853]/15 text-[#D4A853] border border-[#D4A853]/30'
                         : isNextTarget
                         ? 'bg-amber-500/15 text-amber-400 border border-amber-500/30'
-                        : 'bg-slate-800 text-slate-500'
+                        : 'bg-[#1A6B66] text-gray-500'
                     }`}
                   >
                     {milestone.achieved ? (
@@ -122,7 +122,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                     <div className="flex items-center gap-2">
                       <h3
                         className={`text-sm sm:text-base font-bold ${
-                          milestone.achieved ? 'text-white' : isNextTarget ? 'text-amber-200' : 'text-slate-400'
+                          milestone.achieved ? 'text-white' : isNextTarget ? 'text-amber-200' : 'text-gray-600'
                         }`}
                       >
                         {milestone.label}
@@ -139,7 +139,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                       )}
                     </div>
 
-                    <p className="text-xs text-slate-400 mt-1">
+                    <p className="text-xs text-gray-600 mt-1">
                       {milestone.achieved
                         ? 'Ce palier d’indépendance financière a été franchi avec succès.'
                         : isNextTarget
@@ -156,12 +156,12 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
                         ? 'text-[#D4A853]'
                         : isNextTarget
                         ? 'text-amber-300'
-                        : 'text-slate-400'
+                        : 'text-gray-600'
                     }`}
                   >
                     {formatFCFA(milestone.amount)}
                   </span>
-                  <span className="text-[10px] text-slate-400 block font-mono">
+                  <span className="text-[10px] text-gray-600 block font-mono">
                     {milestone.percentage} %
                   </span>
                 </div>

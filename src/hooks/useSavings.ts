@@ -37,16 +37,11 @@ export function useSavings() {
     loadData();
   }, [loadData]);
 
-  // Sync theme to document body and root
+  // Force light theme
   useEffect(() => {
-    if (settings.theme === 'light') {
-      document.documentElement.classList.remove('dark');
-      document.body.className = 'bg-slate-50 text-slate-900 antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
-    } else {
-      document.documentElement.classList.add('dark');
-      document.body.className = 'bg-slate-950 text-slate-100 antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
-    }
-  }, [settings.theme]);
+    document.documentElement.classList.remove('dark');
+    document.body.className = 'bg-[#F0F4F2] text-black antialiased selection:bg-[#D4A853]/20 selection:text-[#D4A853]';
+  }, []);
 
   const calculations = useMemo(() => {
     return calculateSavings(contributions, settings);

@@ -12,8 +12,6 @@ import {
   X,
   Settings,
   Bell,
-  Sun,
-  Moon,
   Download,
   Upload,
   AlertTriangle,
@@ -48,7 +46,6 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
   const [targetDate, setTargetDate] = useState(settings.targetDate);
   const [reminderEnabled, setReminderEnabled] = useState(settings.reminderEnabled);
   const [reminderTime, setReminderTime] = useState(settings.reminderTime);
-  const [theme, setTheme] = useState<'dark' | 'light'>(settings.theme);
 
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [resetConfirmInput, setResetConfirmInput] = useState('');
@@ -80,7 +77,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         targetDate,
         reminderEnabled,
         reminderTime,
-        theme,
+        theme: 'light' as const,
       });
       onClose();
     } catch (err) {
@@ -151,21 +148,21 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-xs p-3 sm:p-4">
-      <div className="w-full max-w-lg bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl p-5 sm:p-6 max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200">
+      <div className="w-full max-w-lg bg-[#F0F4F2] border border-[#1A6B66] rounded-3xl shadow-2xl p-5 sm:p-6 max-h-[90vh] overflow-y-auto animate-in zoom-in-95 duration-200">
         {/* Header */}
-        <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+        <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]">
           <div className="flex items-center gap-2">
-            <div className="p-2 rounded-lg bg-slate-800 text-[#D4A853]">
+            <div className="p-2 rounded-lg bg-[#1A6B66] text-[#D4A853]">
               <Settings className="w-5 h-5" />
             </div>
             <div>
               <h2 className="text-base font-bold text-white">Paramètres</h2>
-              <p className="text-xs text-slate-400">Configuration & Données de l'application</p>
+              <p className="text-xs text-gray-600">Configuration & Données de l'application</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+            className="p-1.5 rounded-lg text-gray-600 hover:text-white hover:bg-[#1A6B66] transition cursor-pointer"
             aria-label="Fermer"
           >
             <X className="w-5 h-5" />
@@ -175,7 +172,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         <form onSubmit={handleSave} className="mt-4 space-y-5">
           {/* Objectif & Cotisation */}
           <div className="space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-600">
               Objectifs financiers
             </h3>
 
@@ -188,7 +185,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="number"
                   value={goalAmount}
                   onChange={(e) => setGoalAmount(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
                   min="1000"
                   step="1000"
                   required
@@ -203,7 +200,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="number"
                   value={dailyTarget}
                   onChange={(e) => setDailyTarget(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-sm text-white font-mono focus:border-[#D4A853] focus:outline-none"
                   min="100"
                   step="100"
                   required
@@ -220,7 +217,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
                   required
                 />
               </div>
@@ -233,7 +230,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   type="date"
                   value={targetDate}
                   onChange={(e) => setTargetDate(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-xl px-3 py-2 text-xs text-white focus:border-[#D4A853] focus:outline-none"
                   required
                 />
               </div>
@@ -241,19 +238,19 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           </div>
 
           {/* Rappel Quotidien */}
-          <div className="space-y-3 pt-2 border-t border-slate-800">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <div className="space-y-3 pt-2 border-t border-[#1A6B66]">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-600 flex items-center gap-1.5">
               <Bell className="w-4 h-4 text-[#D4A853]" />
               <span>Rappel quotidien</span>
             </h3>
 
-            <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 space-y-3">
+            <div className="bg-black/70 border border-[#1A6B66]/80 rounded-xl p-3.5 space-y-3">
               <div className="flex items-center justify-between">
                 <div>
                   <span className="text-xs font-semibold text-slate-200 block">
                     Activer le rappel d'épargne
                   </span>
-                  <span className="text-[11px] text-slate-400">
+                  <span className="text-[11px] text-gray-600">
                     « N'oublie pas de protéger ton avenir. Cotisation du jour : {formatFCFA(dailyTarget)}. »
                   </span>
                 </div>
@@ -264,61 +261,27 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     onChange={(e) => handleToggleReminder(e.target.checked)}
                     className="sr-only peer"
                   />
-                  <div className="w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#D4A853]"></div>
+                  <div className="w-11 h-6 bg-[#1A6B66] peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#D4A853]"></div>
                 </label>
               </div>
 
               {reminderEnabled && (
-                <div className="flex items-center justify-between pt-2 border-t border-slate-800/60">
+                <div className="flex items-center justify-between pt-2 border-t border-[#1A6B66]/60">
                   <span className="text-xs text-slate-300">Heure de notification</span>
                   <input
                     type="time"
                     value={reminderTime}
                     onChange={(e) => setReminderTime(e.target.value)}
-                    className="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-xs text-white font-mono focus:border-[#D4A853] focus:outline-none"
+                    className="bg-[#F0F4F2] border border-[#E2E8F0] rounded-lg px-2.5 py-1 text-xs text-white font-mono focus:border-[#D4A853] focus:outline-none"
                   />
                 </div>
               )}
             </div>
           </div>
 
-          {/* Theme Selector */}
-          <div className="space-y-2 pt-2 border-t border-slate-800">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-              Apparence
-            </h3>
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => setTheme('dark')}
-                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer transition ${
-                  theme === 'dark'
-                    ? 'bg-slate-800 border-[#D4A853] text-white shadow-xs'
-                    : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                <Moon className="w-4 h-4 text-[#D4A853]" />
-                <span>Mode Sombre</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => setTheme('light')}
-                className={`py-2 px-3 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer transition ${
-                  theme === 'light'
-                    ? 'bg-slate-800 border-[#D4A853] text-white shadow-xs'
-                    : 'bg-slate-950 border-slate-800 text-slate-400 hover:text-white'
-                }`}
-              >
-                <Sun className="w-4 h-4 text-amber-400" />
-                <span>Mode Clair</span>
-              </button>
-            </div>
-          </div>
-
           {/* PWA Section */}
-          <div className="space-y-2 pt-2 border-t border-slate-800">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+          <div className="space-y-2 pt-2 border-t border-[#1A6B66]">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-600 flex items-center gap-1.5">
               <Smartphone className="w-4 h-4 text-[#D4A853]" />
               <span>Application & Installation</span>
             </h3>
@@ -326,8 +289,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           </div>
 
           {/* Export & Import */}
-          <div className="space-y-2 pt-2 border-t border-slate-800">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+          <div className="space-y-2 pt-2 border-t border-[#1A6B66]">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-gray-600">
               Sauvegarde & Restauration
             </h3>
 
@@ -335,7 +298,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportCSV}
-                className="py-2.5 px-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en CSV</span>
@@ -344,7 +307,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportJSON}
-                className="py-2.5 px-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en JSON</span>
@@ -352,8 +315,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             <div className="pt-1">
-              <label className="w-full py-2.5 px-3 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-800 text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer">
-                <Upload className="w-3.5 h-3.5 text-slate-400" />
+              <label className="w-full py-2.5 px-3 rounded-xl bg-black hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer">
+                <Upload className="w-3.5 h-3.5 text-gray-600" />
                 <span>Importer une sauvegarde (JSON)</span>
                 <input
                   type="file"
@@ -372,7 +335,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
           </div>
 
           {/* Reset section */}
-          <div className="pt-2 border-t border-slate-800">
+          <div className="pt-2 border-t border-[#1A6B66]">
             <button
               type="button"
               onClick={() => setShowResetConfirm(true)}
@@ -399,7 +362,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
         {/* Reset Confirmation Modal */}
         {showResetConfirm && (
           <div className="fixed inset-0 z-60 flex items-center justify-center bg-black/90 p-4">
-            <div className="w-full max-w-sm rounded-2xl bg-slate-900 border border-rose-500/40 p-5 shadow-2xl space-y-4">
+            <div className="w-full max-w-sm rounded-2xl bg-[#F0F4F2] border border-rose-500/40 p-5 shadow-2xl space-y-4">
               <div className="flex items-center gap-2 text-rose-400">
                 <AlertTriangle className="w-5 h-5 shrink-0" />
                 <h3 className="text-base font-bold text-white">Confirmation obligatoire</h3>
@@ -410,7 +373,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </p>
 
               <div>
-                <label className="block text-[11px] text-slate-400 mb-1">
+                <label className="block text-[11px] text-gray-600 mb-1">
                   Tapez <strong className="text-white">SUPPRIMER</strong> pour confirmer :
                 </label>
                 <input
@@ -418,7 +381,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                   value={resetConfirmInput}
                   onChange={(e) => setResetConfirmInput(e.target.value)}
                   placeholder="SUPPRIMER"
-                  className="w-full bg-slate-950 border border-rose-500/40 rounded-xl px-3 py-2 text-sm text-white focus:outline-none"
+                  className="w-full bg-black border border-rose-500/40 rounded-xl px-3 py-2 text-sm text-white focus:outline-none"
                 />
               </div>
 
@@ -429,7 +392,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     setShowResetConfirm(false);
                     setResetConfirmInput('');
                   }}
-                  className="flex-1 py-2 rounded-xl bg-slate-800 text-xs font-semibold text-slate-300 hover:bg-slate-700 transition cursor-pointer"
+                  className="flex-1 py-2 rounded-xl bg-[#1A6B66] text-xs font-semibold text-slate-300 hover:bg-[#E2E8F0] transition cursor-pointer"
                 >
                   Annuler
                 </button>

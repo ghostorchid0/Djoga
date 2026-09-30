@@ -40,8 +40,8 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-md p-4 animate-in fade-in duration-300">
-      <div className="w-full max-w-md bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-300">
+      <div className="w-full max-w-md bg-white border border-[#1A6B66]/30 rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden">
         {/* Glow */}
         <div className="absolute -top-16 -right-16 w-48 h-48 bg-[#D4A853]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -52,7 +52,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <span className="text-xs uppercase font-extrabold tracking-wider text-slate-400 block">
+              <span className="text-xs uppercase font-extrabold tracking-wider text-gray-600 block">
                 SECURITY FUND
               </span>
               <span className="text-xs text-[#D4A853] font-semibold">
@@ -66,7 +66,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <div
                 key={s}
                 className={`h-1.5 rounded-full transition-all ${
-                  step === s ? 'w-6 bg-[#D4A853]' : step > s ? 'w-2 bg-[#D4A853]' : 'w-2 bg-slate-800'
+                  step === s ? 'w-6 bg-[#D4A853]' : step > s ? 'w-2 bg-[#D4A853]' : 'w-2 bg-[#1A6B66]'
                 }`}
               />
             ))}
@@ -83,7 +83,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <h2 className="text-lg font-bold text-white">
                 Quel est ton objectif d'épargne ?
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-gray-600">
                 La somme cible pour construire ton bouclier financier de sécurité.
               </p>
             </div>
@@ -94,11 +94,11 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={goalAmount}
                   onChange={(e) => setGoalAmount(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="5000"
                   step="5000"
                 />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">
+                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-600">
                   FCFA
                 </span>
               </div>
@@ -111,7 +111,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                     className={`flex-1 py-1.5 rounded-lg border text-xs font-medium transition cursor-pointer ${
                       goalAmount === amt
                         ? 'bg-[#D4A853]/20 border-[#D4A853] text-[#D4A853]'
-                        : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
+                        : 'bg-[#1A6B66]/60 border-[#E2E8F0] text-gray-600 hover:text-white'
                     }`}
                   >
                     {amt.toLocaleString('fr-FR')} F
@@ -143,7 +143,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <h2 className="text-lg font-bold text-white">
                 Combien veux-tu épargner par jour ?
               </h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-gray-600">
                 La cotisation quotidienne recommandée pour progresser sans rupture.
               </p>
             </div>
@@ -154,11 +154,11 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="number"
                   value={dailyTarget}
                   onChange={(e) => setDailyTarget(Number(e.target.value))}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-xl font-bold font-mono text-white focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] pr-16"
                   min="200"
                   step="100"
                 />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-slate-400">
+                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-600">
                   FCFA / j
                 </span>
               </div>
@@ -171,7 +171,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                     className={`flex-1 py-1.5 rounded-lg border text-xs font-medium transition cursor-pointer ${
                       dailyTarget === amt
                         ? 'bg-[#D4A853]/20 border-[#D4A853] text-[#D4A853]'
-                        : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
+                        : 'bg-[#1A6B66]/60 border-[#E2E8F0] text-gray-600 hover:text-white'
                     }`}
                   >
                     {amt.toLocaleString('fr-FR')} F
@@ -184,7 +184,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="py-3.5 px-4 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-750 text-xs font-semibold cursor-pointer"
+                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-slate-300 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
               >
                 Retour
               </button>
@@ -208,7 +208,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                 Étape 3 sur 3
               </span>
               <h2 className="text-lg font-bold text-white">Quand commences-tu ?</h2>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-gray-600">
                 Choisis le point de départ de ton engagement financier.
               </p>
             </div>
@@ -219,19 +219,19 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
                   type="date"
                   value={startDate}
                   onChange={(e) => setStartDate(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#D4A853] pl-10"
+                  className="w-full bg-black border border-[#E2E8F0] rounded-2xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-[#D4A853] pl-10"
                 />
-                <Calendar className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                <Calendar className="w-4 h-4 text-gray-600 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
 
             {/* Discipline Pledge */}
-            <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
+            <div className="bg-black/80 border border-[#1A6B66] rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
               <div className="font-semibold text-[#D4A853] flex items-center gap-1.5">
                 <Target className="w-3.5 h-3.5" />
                 <span>Règle d'or de sanctuarisation</span>
               </div>
-              <p className="text-[11px] text-slate-400 leading-relaxed">
+              <p className="text-[11px] text-gray-600 leading-relaxed">
                 Ce fonds est dédié uniquement à ta tranquillité d'esprit (imprévus de sécurité). Il est entièrement dissocié de toute autre dépense ou entreprise.
               </p>
             </div>
@@ -240,7 +240,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="py-3.5 px-4 rounded-xl bg-slate-800 text-slate-300 hover:bg-slate-750 text-xs font-semibold cursor-pointer"
+                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-slate-300 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
               >
                 Retour
               </button>

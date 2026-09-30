@@ -227,7 +227,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
       </div>
 
       {/* Important Rule Banner */}
-      <div className="p-4 rounded-2xl bg-slate-900/50 border border-[#D4A574]/30 text-xs text-gray-600 space-y-1.5">
+      <div className="p-4 rounded-2xl bg-[#F0F4F2]/50 border border-[#D4A574]/30 text-xs text-gray-600 space-y-1.5">
         <div className="flex items-center gap-2 text-slate-200 font-semibold">
           <Calendar className="w-4 h-4 text-[#4A5D23]" />
           <span>Cadre de l'objectif</span>
@@ -235,7 +235,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
         <p>
           Date de lancement : <strong>{formatDateFull(settings.startDate)}</strong> · Date cible : <strong>{formatDateFull(settings.targetDate)}</strong>
         </p>
-        <p className="text-slate-500 text-[11px]">
+        <p className="text-gray-500 text-[11px]">
           Ce montant est sanctuarisé pour faire face aux imprévus vitaux. Ne le confonds jamais avec tes dépenses professionnelles ou personnelles annexes.
         </p>
       </div>

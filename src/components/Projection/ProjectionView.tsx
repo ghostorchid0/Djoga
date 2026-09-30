@@ -28,26 +28,26 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
           <Compass className="w-5 h-5 text-emerald-400" />
           <span>PROJECTION</span>
         </h1>
-        <p className="text-xs text-slate-400 mt-0.5">
+        <p className="text-xs text-gray-600 mt-0.5">
           Dates estimées d'accomplissement selon ton intensité d'épargne
         </p>
       </div>
 
       {/* Main Focus: Current Rhythm Projection */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-950/60 via-slate-900 to-slate-950 border border-emerald-500/30 p-5 sm:p-6 shadow-xl">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-emerald-950/60 via-[#F0F4F2] to-black border border-emerald-500/30 p-5 sm:p-6 shadow-xl">
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 mb-2">
           <Sparkles className="w-4 h-4" />
           <span>Avec ton rythme actuel</span>
         </div>
 
         <div className="my-2">
-          <span className="text-xs text-slate-400 block">Objectif prévu le :</span>
+          <span className="text-xs text-gray-600 block">Objectif prévu le :</span>
           <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1 block">
             {currentRateProjection.projectedDate}
           </span>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-slate-300 pt-3 border-t border-slate-800/80 mt-4">
+        <div className="flex items-center justify-between text-xs text-slate-300 pt-3 border-t border-[#1A6B66]/80 mt-4">
           <span>
             Basé sur ton rythme moyen constaté de <strong className="text-emerald-400 font-mono">{formatFCFA(realDailyAverage)}/j</strong>
           </span>
@@ -61,7 +61,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
 
       {/* Preset Scenarios Comparison (from prompt section 9) */}
       <div className="space-y-3">
-        <h2 className="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">
+        <h2 className="text-xs font-bold uppercase tracking-wider text-gray-600 px-1">
           Scénarios de cotisation comparative
         </h2>
 
@@ -69,19 +69,19 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
           {presetScenarios.map((scenario) => (
             <div
               key={scenario.rate}
-              className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between hover:border-slate-700 transition"
+              className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4 flex flex-col justify-between hover:border-[#E2E8F0] transition"
             >
               <div className="flex items-center justify-between">
                 <span className="text-sm font-bold font-mono text-emerald-400">
                   {scenario.rateLabel}
                 </span>
-                <span className="text-[11px] text-slate-400 font-mono">
+                <span className="text-[11px] text-gray-600 font-mono">
                   {scenario.daysRemaining} {scenario.daysRemaining > 1 ? 'jours' : 'jour'}
                 </span>
               </div>
 
               <div className="mt-3">
-                <span className="text-[11px] text-slate-400 block">Date estimée :</span>
+                <span className="text-[11px] text-gray-600 block">Date estimée :</span>
                 <span className="text-base font-bold text-white capitalize mt-0.5 block">
                   {scenario.projectedDate}
                 </span>
@@ -92,7 +92,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
       </div>
 
       {/* Interactive Custom Simulator */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 space-y-4">
+      <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-5 space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Calculator className="w-4 h-4 text-emerald-400" />
@@ -100,7 +100,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
               Simulateur personnalisé
             </h2>
           </div>
-          <span className="text-xs text-slate-400">
+          <span className="text-xs text-gray-600">
             Reste : {formatFCFA(remainingAmount)}
           </span>
         </div>
@@ -123,7 +123,7 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
             className="w-full accent-emerald-500 cursor-pointer"
           />
 
-          <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+          <div className="flex justify-between text-[10px] text-gray-500 font-mono">
             <span>200 F</span>
             <span>2 500 F</span>
             <span>5 000 F</span>
@@ -131,15 +131,15 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
           </div>
         </div>
 
-        <div className="bg-slate-950/80 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
+        <div className="bg-black/80 border border-[#1A6B66] rounded-xl p-4 flex items-center justify-between">
           <div>
-            <span className="text-xs text-slate-400 block">Date cible résultante :</span>
+            <span className="text-xs text-gray-600 block">Date cible résultante :</span>
             <span className="text-base font-bold text-white capitalize mt-0.5 block">
               {customProjectedDate}
             </span>
           </div>
           <div className="text-right">
-            <span className="text-xs text-slate-400 block">Délai :</span>
+            <span className="text-xs text-gray-600 block">Délai :</span>
             <span className="text-sm font-bold font-mono text-emerald-400 mt-0.5 block">
               {customDaysRemaining} {customDaysRemaining > 1 ? 'jours' : 'jour'}
             </span>
@@ -148,8 +148,8 @@ export const ProjectionView: React.FC<ProjectionViewProps> = ({
       </div>
 
       {/* Recap info */}
-      <div className="text-xs text-slate-400 bg-slate-900/40 p-4 rounded-2xl border border-slate-800/80 flex items-center gap-3">
-        <Calendar className="w-4 h-4 text-slate-400 shrink-0" />
+      <div className="text-xs text-gray-600 bg-[#F0F4F2]/40 p-4 rounded-2xl border border-[#1A6B66]/80 flex items-center gap-3">
+        <Calendar className="w-4 h-4 text-gray-600 shrink-0" />
         <p>
           Calcul calculé à partir de ton solde actuel ({formatFCFA(totalSaved)}). Plus tu es régulier, plus la date prévisionnelle se rapproche.
         </p>
