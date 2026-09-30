@@ -90,7 +90,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
       {/* Header with Navigation */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+          <h1 className="text-xl font-extrabold tracking-tight text-[#0D4F4C] flex items-center gap-2">
             <CalendarIcon className="w-5 h-5 text-[#D4A853]" />
             <span>CALENDRIER</span>
           </h1>
@@ -101,7 +101,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
 
         <button
           onClick={handleGoToday}
-          className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-[#1A6B66] hover:bg-[#1A6B66] text-slate-300 border border-[#E2E8F0] transition cursor-pointer"
+          className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-[#1A6B66] hover:bg-[#1A6B66] text-gray-700 border border-[#E2E8F0] transition cursor-pointer"
         >
           Aujourd'hui
         </button>
@@ -119,7 +119,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
             <ChevronLeft className="w-5 h-5" />
           </button>
 
-          <h2 className="text-base font-bold text-white capitalize">
+          <h2 className="text-base font-bold text-[#0D4F4C] capitalize">
             {MONTH_NAMES[month]} {year}
           </h2>
 
@@ -133,22 +133,22 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         </div>
 
         {/* Legend */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 p-2.5 rounded-xl bg-[#0D4F4C]/60 border border-[#1A6B66]/80 text-[11px]">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4 p-2.5 rounded-xl bg-white border border-[#1A6B66]/80 text-[11px]">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-md bg-[#D4A853] shadow-xs shadow-[#D4A853]/50" />
-            <span className="text-slate-300">Objectif atteint (1 000 F)</span>
+            <span className="text-gray-700">Objectif atteint (1 000 F)</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-md bg-blue-500 shadow-xs shadow-blue-500/50" />
-            <span className="text-slate-300">Supérieur (&gt; 1 000 F)</span>
+            <span className="text-gray-700">Supérieur (&gt; 1 000 F)</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-md bg-amber-500 shadow-xs shadow-amber-500/50" />
-            <span className="text-slate-300">Inférieur (&lt; 1 000 F)</span>
+            <span className="text-gray-700">Inférieur (&lt; 1 000 F)</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-md bg-[#1A6B66] border border-[#E2E8F0]" />
-            <span className="text-gray-600">Aucune cotisation</span>
+            <span className="text-gray-700">Aucune cotisation</span>
           </div>
         </div>
 
@@ -231,7 +231,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
       <div className="bg-[#F0F4F2]/90 border border-[#1A6B66] rounded-2xl p-4 sm:p-5">
         <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]">
           <div>
-            <h3 className="text-sm font-bold text-white uppercase tracking-wide">
+            <h3 className="text-sm font-bold text-[#0D4F4C] uppercase tracking-wide">
               {formatDateFull(selectedDate)}
             </h3>
             <p className="text-xs text-gray-600">
@@ -257,7 +257,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
             {selectedDayContributions.map((c) => (
               <div key={c.id} className="py-3 flex items-center justify-between">
                 <div>
-                  <span className="text-sm font-bold font-mono text-white block">
+                  <span className="text-sm font-bold font-mono text-[#0D4F4C] block">
                     +{formatFCFA(c.amount)}
                   </span>
                   {c.note && <span className="text-xs text-gray-600 block mt-0.5">{c.note}</span>}

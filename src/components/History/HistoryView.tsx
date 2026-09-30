@@ -37,7 +37,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+          <h1 className="text-xl font-extrabold tracking-tight text-[#0D4F4C] flex items-center gap-2">
             <History className="w-5 h-5 text-[#D4A853]" />
             <span>HISTORIQUE</span>
           </h1>
@@ -72,7 +72,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-colors cursor-pointer text-center ${
                 filter === tab.key
                   ? 'bg-[#1A6B66] text-white shadow-xs'
-                  : 'text-gray-600 hover:text-slate-200'
+                  : 'text-gray-600 hover:text-[#0D4F4C]'
               }`}
             >
               {tab.label}
@@ -126,7 +126,7 @@ export const HistoryView: React.FC<HistoryViewProps> = ({
               className="p-4 flex items-center justify-between hover:bg-slate-850/60 transition group"
             >
               <div className="space-y-0.5">
-                <div className="text-xs font-[#0D4F4C] text-slate-200 uppercase tracking-wider font-mono">
+                <div className="text-xs font-[#0D4F4C] uppercase tracking-wider font-mono">
                   {formatDateFrench(item.date, { day: 'numeric', month: 'short', year: 'numeric' })}
                 </div>
                 {item.note && (

@@ -82,7 +82,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
     <div className="space-y-5 pb-8 animate-in fade-in duration-150">
       {/* Header */}
       <div>
-        <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+        <h1 className="text-xl font-extrabold tracking-tight text-[#0D4F4C] flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-[#D4A853]" />
           <span>STATISTIQUES</span>
         </h1>
@@ -96,7 +96,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <TrendingUp className="w-4 h-4 text-[#D4A853]" />
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-300">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-gray-700">
               Évolution du fonds d'épargne
             </h2>
           </div>
@@ -204,7 +204,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par jour
           </span>
-          <span className="text-xl font-bold font-mono text-white mt-1 block">
+          <span className="text-xl font-bold font-mono text-[#0D4F4C] mt-1 block">
             {formatFCFA(realDailyAverage)}
           </span>
           <span className="text-[10px] text-gray-600">rythme moyen continu</span>
@@ -215,7 +215,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par semaine
           </span>
-          <span className="text-xl font-bold font-mono text-white mt-1 block">
+          <span className="text-xl font-bold font-mono text-[#0D4F4C] mt-1 block">
             {formatFCFA(weeklyAverage)}
           </span>
           <span className="text-[10px] text-gray-600">vitesse hebdomadaire</span>
@@ -226,7 +226,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
           <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider block">
             Moyenne par mois
           </span>
-          <span className="text-xl font-bold font-mono text-white mt-1 block">
+          <span className="text-xl font-bold font-mono text-[#0D4F4C] mt-1 block">
             {formatFCFA(monthlyAverage)}
           </span>
           <span className="text-[10px] text-gray-600">projection 30 jours</span>
@@ -282,7 +282,7 @@ export const StatisticsView: React.FC<StatisticsViewProps> = ({
             </span>
             <CalendarX className="w-4 h-4 text-gray-500" />
           </div>
-          <span className="text-xl font-bold font-mono text-slate-300 mt-1 block">
+          <span className="text-xl font-bold font-mono text-gray-700 mt-1 block">
             {totalDaysWithoutContribution} <span className="text-xs font-normal text-gray-600">jours</span>
           </span>
           <span className="text-[10px] text-gray-600">depuis le lancement</span>

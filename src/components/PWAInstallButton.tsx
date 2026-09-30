@@ -54,10 +54,10 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' | 'mob
           onClick={() => setShowIOSGuide(true)}
           className={
             variant === 'settings'
-              ? 'w-full flex items-center justify-center gap-2 rounded-xl bg-[#1A6B66] hover:bg-[#1A6B66] border border-[#E2E8F0] px-4 py-3 text-sm font-medium text-slate-200 active:scale-[0.98] transition cursor-pointer'
+              ? 'w-full flex items-center justify-center gap-2 rounded-xl bg-[#1A6B66] hover:bg-[#1A6B66] border border-[#E2E8F0] px-4 py-3 text-sm font-medium text-gray-700 active:scale-[0.98] transition cursor-pointer'
               : variant === 'mobile'
               ? 'w-full flex items-center gap-3 px-4 py-3 rounded-xl transition cursor-pointer text-white/80 hover:bg-white/10'
-              : 'flex items-center gap-1.5 rounded-lg border border-[#E2E8F0] bg-[#1A6B66]/80 px-2.5 py-1.5 text-xs font-medium text-slate-300 hover:text-white transition cursor-pointer'
+              : 'flex items-center gap-1.5 rounded-lg border border-[#E2E8F0] bg-[#1A6B66]/80 px-2.5 py-1.5 text-xs font-medium text-gray-700 hover:text-white transition cursor-pointer'
           }
         >
           <Share className="w-3.5 h-3.5 shrink-0" />
@@ -66,7 +66,7 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' | 'mob
 
         {showIOSGuide && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0D4F4C]/75 backdrop-blur-xs p-4 animate-in fade-in duration-200">
-            <div className="w-full max-w-sm rounded-2xl bg-[#F0F4F2] border border-[#1A6B66] p-6 shadow-2xl text-slate-200">
+            <div className="w-full max-w-sm rounded-2xl bg-[#F0F4F2] border border-[#1A6B66] p-6 shadow-2xl text-gray-700">
               <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]">
                 <h3 className="text-base font-semibold text-white">Installer sur iPhone / iPad</h3>
                 <button
@@ -77,7 +77,7 @@ export const PWAInstallButton: React.FC<{ variant?: 'header' | 'settings' | 'mob
                   <X className="w-5 h-5" />
                 </button>
               </div>
-              <ol className="mt-4 space-y-3 text-sm text-slate-300">
+              <ol className="mt-4 space-y-3 text-sm text-gray-700">
                 <li className="flex items-start gap-2.5">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#D4A853]/20 text-xs font-bold text-[#D4A853]">1</span>
                   <span>Appuie sur le bouton <strong>Partager</strong> <Share className="inline w-3.5 h-3.5 mx-0.5" /> dans la barre Safari.</span>

@@ -184,7 +184,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-slate-300 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
+                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-gray-700 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
               >
                 Retour
               </button>
@@ -226,7 +226,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
             </div>
 
             {/* Discipline Pledge */}
-            <div className="bg-[#0D4F4C]/80 border border-[#1A6B66] rounded-xl p-3.5 text-xs text-slate-300 space-y-1">
+            <div className="bg-[#0D4F4C]/80 border border-[#1A6B66] rounded-xl p-3.5 text-xs text-gray-700 space-y-1">
               <div className="font-semibold text-[#D4A853] flex items-center gap-1.5">
                 <Target className="w-3.5 h-3.5" />
                 <span>Règle d'or de sanctuarisation</span>
@@ -240,7 +240,7 @@ export const OnboardingModal: React.FC<OnboardingModalProps> = ({ isOpen, onComp
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-slate-300 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
+                className="py-3.5 px-4 rounded-xl bg-[#1A6B66] text-gray-700 hover:bg-[#1A6B66] text-xs font-semibold cursor-pointer"
               >
                 Retour
               </button>

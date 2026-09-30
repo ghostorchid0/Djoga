@@ -178,7 +178,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs text-slate-300 mb-1">
+                <label className="block text-xs text-gray-700 mb-1">
                   Objectif total (FCFA)
                 </label>
                 <input
@@ -193,7 +193,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs text-slate-300 mb-1">
+                <label className="block text-xs text-gray-700 mb-1">
                   Cotisation quotidienne (FCFA)
                 </label>
                 <input
@@ -210,7 +210,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-xs text-slate-300 mb-1">
+                <label className="block text-xs text-gray-700 mb-1">
                   Date de début
                 </label>
                 <input
@@ -223,7 +223,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               </div>
 
               <div>
-                <label className="block text-xs text-slate-300 mb-1">
+                <label className="block text-xs text-gray-700 mb-1">
                   Date cible souhaitée
                 </label>
                 <input
@@ -247,7 +247,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             <div className="bg-[#0D4F4C]/70 border border-[#1A6B66]/80 rounded-xl p-3.5 space-y-3">
               <div className="flex items-center justify-between">
                 <div>
-                  <span className="text-xs font-semibold text-slate-200 block">
+                  <span className="text-xs font-semibold text-gray-700 block">
                     Activer le rappel d'épargne
                   </span>
                   <span className="text-[11px] text-gray-600">
@@ -267,7 +267,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
 
               {reminderEnabled && (
                 <div className="flex items-center justify-between pt-2 border-t border-[#1A6B66]/60">
-                  <span className="text-xs text-slate-300">Heure de notification</span>
+                  <span className="text-xs text-gray-700">Heure de notification</span>
                   <input
                     type="time"
                     value={reminderTime}
@@ -298,7 +298,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportCSV}
-                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-gray-700 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en CSV</span>
@@ -307,7 +307,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
               <button
                 type="button"
                 onClick={handleExportJSON}
-                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer"
+                className="py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-gray-700 flex items-center justify-center gap-1.5 transition cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-[#D4A853]" />
                 <span>Exporter en JSON</span>
@@ -315,7 +315,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
 
             <div className="pt-1">
-              <label className="w-full py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-slate-300 flex items-center justify-center gap-1.5 transition cursor-pointer">
+              <label className="w-full py-2.5 px-3 rounded-xl bg-[#0D4F4C] hover:bg-[#1A6B66] border border-[#1A6B66] text-xs font-semibold text-gray-700 flex items-center justify-center gap-1.5 transition cursor-pointer">
                 <Upload className="w-3.5 h-3.5 text-gray-600" />
                 <span>Importer une sauvegarde (JSON)</span>
                 <input
@@ -368,7 +368,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                 <h3 className="text-base font-bold text-white">Confirmation obligatoire</h3>
               </div>
 
-              <p className="text-xs text-slate-300">
+              <p className="text-xs text-gray-700">
                 Cette action supprimera irréversiblement toutes les cotisations enregistrées et réinitialisera l'application à zéro.
               </p>
 
@@ -392,7 +392,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
                     setShowResetConfirm(false);
                     setResetConfirmInput('');
                   }}
-                  className="flex-1 py-2 rounded-xl bg-[#1A6B66] text-xs font-semibold text-slate-300 hover:bg-[#E2E8F0] transition cursor-pointer"
+                  className="flex-1 py-2 rounded-xl bg-[#1A6B66] text-xs font-semibold text-gray-700 hover:bg-[#E2E8F0] transition cursor-pointer"
                 >
                   Annuler
                 </button>

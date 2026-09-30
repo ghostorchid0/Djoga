@@ -228,7 +228,7 @@ export const ObjectiveView: React.FC<ObjectiveViewProps> = ({
 
       {/* Important Rule Banner */}
       <div className="p-4 rounded-2xl bg-[#F0F4F2]/50 border border-[#D4A574]/30 text-xs text-gray-600 space-y-1.5">
-        <div className="flex items-center gap-2 text-slate-200 font-semibold">
+        <div className="flex items-center gap-2 text-gray-700 font-semibold">
           <Calendar className="w-4 h-4 text-[#4A5D23]" />
           <span>Cadre de l'objectif</span>
         </div>

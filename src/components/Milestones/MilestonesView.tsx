@@ -34,7 +34,7 @@ export const MilestonesView: React.FC<MilestonesViewProps> = ({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-xl font-extrabold tracking-tight text-white flex items-center gap-2">
+          <h1 className="text-xl font-extrabold tracking-tight text-[#0D4F4C] flex items-center gap-2">
             <Trophy className="w-5 h-5 text-amber-400" />
             <span>PALIERS D'ÉPARGNE</span>
           </h1>
