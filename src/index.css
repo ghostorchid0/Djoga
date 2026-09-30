@@ -15,10 +15,10 @@
     --color-white: rgb(255, 255, 255);
     --color-off-white: rgb(248, 250, 248);
     --color-cream: rgb(240, 244, 242);
-    --color-text: rgb(13, 79, 76);
-    --color-text-muted: rgb(26, 107, 102);
-    --color-border: rgb(13, 79, 76);
-    --color-border-light: rgb(26, 107, 102);
+    --color-text: rgb(0, 0, 0);
+    --color-text-muted: rgb(75, 85, 99);
+    --color-border: rgb(209, 213, 219);
+    --color-border-light: rgb(229, 231, 235);
   }
 
   html {

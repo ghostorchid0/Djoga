@@ -48,11 +48,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="space-y-5 pb-6 animate-in fade-in duration-150">
       {/* Strict Financial Discipline Banner */}
-      <div className="bg-gradient-to-r bg-[#D4A853]/5 text-white/5 border border-[#6366F1]/20 rounded-lg px-4 py-3 flex items-center justify-between text-xs text-[#1A6B66]/80">
+      <div className="bg-gradient-to-r bg-[#D4A853]/5 text-white/5 border border-[#6366F1]/20 rounded-lg px-4 py-3 flex items-center justify-between text-xs text-gray-600">
         <div className="flex items-center gap-2">
           <ShieldAlert className="w-4 h-4 text-[#6366F1] shrink-0" />
           <span className="truncate">
-            <strong className="text-[#0D4F4C]">Règle de fer :</strong> Ce fonds est exclusivement dédié à ta sécurité financière personnelle (200 000 FCFA).
+            <strong className="text-black">Règle de fer :</strong> Ce fonds est exclusivement dédié à ta sécurité financière personnelle (200 000 FCFA).
           </span>
         </div>
       </div>
@@ -68,7 +68,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* 1. Épargne actuelle */}
         <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider">
               Épargne actuelle
             </span>
             <div className="p-1.5 rounded-lg bg-gradient-to-br bg-[#D4A853]/10 text-white/10 text-[#6366F1]">
@@ -76,17 +76,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
+            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
               {formatFCFA(totalSaved)}
             </span>
-            <span className="text-[10px] text-[#1A6B66]/80/70">total sécurisé</span>
+            <span className="text-[10px] text-gray-600/70">total sécurisé</span>
           </div>
         </div>
 
         {/* 2. Montant restant */}
         <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider">
               Reste à épargner
             </span>
             <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
@@ -94,17 +94,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
+            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
               {formatFCFA(remainingAmount)}
             </span>
-            <span className="text-[10px] text-[#1A6B66]/80/70">pour atteindre le but</span>
+            <span className="text-[10px] text-gray-600/70">pour atteindre le but</span>
           </div>
         </div>
 
         {/* 3. Jours cotisés */}
         <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider">
               Jours cotisés
             </span>
             <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#10B981]/10 to-[#10B981]/5 text-[#10B981]">
@@ -112,17 +112,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div>
-            <span className="text-lg sm:text-xl font-bold font-mono text-[#0D4F4C] block">
-              {totalDaysContributed} <span className="text-xs font-normal text-[#1A6B66]/80/70">jours</span>
+            <span className="text-lg sm:text-xl font-bold font-mono text-black block">
+              {totalDaysContributed} <span className="text-xs font-normal text-gray-600/70">jours</span>
             </span>
-            <span className="text-[10px] text-[#1A6B66]/80/70">jours d'action active</span>
+            <span className="text-[10px] text-gray-600/70">jours d'action active</span>
           </div>
         </div>
 
         {/* 4. Série actuelle */}
         <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
+            <span className="text-[11px] font-semibold text-gray-600 uppercase tracking-wider">
               Série actuelle
             </span>
             <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
@@ -138,7 +138,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 {currentStreak > 1 ? 'jours' : 'jour'}
               </span>
             </div>
-            <span className="text-[10px] text-[#1A6B66]/80/70">≥ {settings.dailyTarget} F/jour</span>
+            <span className="text-[10px] text-gray-600/70">≥ {settings.dailyTarget} F/jour</span>
           </div>
         </div>
       </div>
@@ -168,31 +168,31 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               ) : (
                 <TrendingDown className="w-4 h-4 text-[#F59E0B]" />
               )}
-              <span className="text-xs font-semibold text-[#0D4F4C]/80 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-black/80 uppercase tracking-wider">
                 Rythme & Synchronisation
               </span>
             </div>
-            <ArrowUpRight className="w-3.5 h-3.5 text-[#1A6B66]/80/60" />
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600/60" />
           </div>
 
           <div className="mt-2.5">
             {gap > 0 ? (
-              <p className="text-xs text-[#0D4F4C]/80">
+              <p className="text-xs text-black/80">
                 Tu es en <strong className="text-[#10B981] font-bold">avance de {formatFCFA(gap)}</strong> sur ton planning initial.
               </p>
             ) : gap < 0 ? (
-              <p className="text-xs text-[#0D4F4C]/80">
+              <p className="text-xs text-black/80">
                 Tu as <strong className="text-[#F59E0B] font-bold">{formatFCFA(Math.abs(gap))} de retard</strong> sur la cible théorique.
               </p>
             ) : (
-              <p className="text-xs text-[#0D4F4C]/80">
+              <p className="text-xs text-black/80">
                 Tu suis <strong className="text-[#10B981] font-bold">exactement le rythme prévu</strong> ({formatFCFA(settings.dailyTarget)} / jour).
               </p>
             )}
 
             {remainingAmount > 0 && neededDailyAmount > 0 && (
-              <p className="text-[11px] text-[#1A6B66]/80/70 mt-1">
-                Nouveau rythme conseillé : <strong className="text-[#0D4F4C] font-mono">{formatFCFA(neededDailyAmount)} / jour</strong>
+              <p className="text-[11px] text-gray-600/70 mt-1">
+                Nouveau rythme conseillé : <strong className="text-black font-mono">{formatFCFA(neededDailyAmount)} / jour</strong>
               </p>
             )}
           </div>
@@ -206,21 +206,21 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#EC4899]" />
-              <span className="text-xs font-semibold text-[#0D4F4C]/80 uppercase tracking-wider">
+              <span className="text-xs font-semibold text-black/80 uppercase tracking-wider">
                 Prochain Palier
               </span>
             </div>
-            <ArrowUpRight className="w-3.5 h-3.5 text-[#1A6B66]/80/60" />
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600/60" />
           </div>
 
           <div className="mt-2.5">
             {nextMilestone ? (
               <div>
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-[#0D4F4C]">{nextMilestone.label}</span>
+                  <span className="text-black">{nextMilestone.label}</span>
                   <span className="text-[#6366F1] font-mono">{formatFCFA(nextMilestone.amount)}</span>
                 </div>
-                <div className="text-[11px] text-[#1A6B66]/80/70 mt-1">
+                <div className="text-[11px] text-gray-600/70 mt-1">
                   Encore {formatFCFA(Math.max(0, nextMilestone.amount - totalSaved))} à mobiliser pour valider cette étape.
                 </div>
               </div>
@@ -229,7 +229,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                 <p className="text-xs text-[#10B981] font-bold">
                   🎉 Tous les paliers ont été atteints avec succès !
                 </p>
-                <p className="text-[11px] text-[#1A6B66]/80/70 mt-1">
+                <p className="text-[11px] text-gray-600/70 mt-1">
                   Fonds de sécurité de {formatFCFA(settings.goalAmount)} entièrement consolidé.
                 </p>
               </div>
@@ -241,7 +241,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* Recent Contributions Preview */}
       <div className="pt-2">
         <div className="flex items-center justify-between mb-3 px-1">
-          <h2 className="text-xs font-bold uppercase tracking-wider text-[#1A6B66]/80">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-gray-600">
             Dernières cotisations
           </h2>
           <button
@@ -255,8 +255,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
         {recentContributions.length === 0 ? (
           <div className="bg-white border border-dashed border-[#1A6B66]/30 rounded-lg p-6 text-center">
-            <p className="text-sm text-[#1A6B66]/80">Aucune cotisation enregistrée pour le moment.</p>
-            <p className="text-xs text-[#1A6B66]/80/60 mt-1">Commence dès aujourd'hui avec 1 000 FCFA pour poser ta première pierre.</p>
+            <p className="text-sm text-gray-600">Aucune cotisation enregistrée pour le moment.</p>
+            <p className="text-xs text-gray-600/60 mt-1">Commence dès aujourd'hui avec 1 000 FCFA pour poser ta première pierre.</p>
             <button
               onClick={onOpenContributionModal}
               className="mt-3.5 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r bg-[#D4A853]/10 text-white/10 text-xs font-semibold text-[#6366F1] hover:bg-[#D4A853]/20 hover:text-white/20 transition cursor-pointer"
@@ -270,11 +270,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             {recentContributions.slice(0, 4).map((c) => (
               <div key={c.id} className="p-3.5 flex items-center justify-between hover:bg-[#F8FAFC] transition">
                 <div>
-                  <div className="text-xs font-bold text-[#0D4F4C]/80 uppercase tracking-wide">
+                  <div className="text-xs font-bold text-black/80 uppercase tracking-wide">
                     {formatDateFrench(c.date, { day: 'numeric', month: 'short' })}
                   </div>
                   {c.note && (
-                    <div className="text-[11px] text-[#1A6B66]/80/70 truncate max-w-[200px] sm:max-w-xs mt-0.5">
+                    <div className="text-[11px] text-gray-600/70 truncate max-w-[200px] sm:max-w-xs mt-0.5">
                       {c.note}
                     </div>
                   )}

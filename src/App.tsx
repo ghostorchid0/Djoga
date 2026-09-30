@@ -118,7 +118,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F0F4F2] text-[#0D4F4C] flex flex-col font-sans transition-colors duration-200">
+    <div className="min-h-screen bg-[#F0F4F2] text-black flex flex-col font-sans transition-colors duration-200">
       {/* Top Header Bar */}
       <header className="sticky top-0 z-40 bg-[#0D4F4C] border-b border-[#1A6B66]/30 px-4 py-3 sm:px-6 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -139,7 +139,7 @@ export default function App() {
                   {formatFCFA(settings.goalAmount)}
                 </span>
               </div>
-              <span className="text-[10px] text-[#1A6B66]/80 font-medium block">
+              <span className="text-[10px] text-white/80 font-medium block">
                 Discipline & Épargne Personnelle
               </span>
             </div>
@@ -151,9 +151,9 @@ export default function App() {
             {calculations.currentStreak > 0 && (
               <div
                 title={`${calculations.currentStreak} jours consécutifs de cotisation`}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#D4A853]/20 border border-[#D4A853]/40 text-[#D4A853] text-xs font-bold font-mono"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#D4A853] border border-[#B8956E] text-white text-xs font-bold font-mono"
               >
-                <Flame className="w-3.5 h-3.5 fill-[#D4A853]" />
+                <Flame className="w-3.5 h-3.5 fill-white" />
                 <span>{calculations.currentStreak} j</span>
               </div>
             )}
@@ -164,7 +164,7 @@ export default function App() {
             {/* Settings Trigger */}
             <button
               onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-xl text-[#1A6B66]/80 hover:text-white hover:bg-[#1A6B66]/30 border border-[#1A6B66]/30 hover:border-[#D4A853]/50 transition cursor-pointer"
+              className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-[#1A6B66]/30 border border-[#1A6B66]/30 hover:border-[#D4A853]/50 transition cursor-pointer"
               aria-label="Paramètres"
               title="Paramètres de l'application"
             >
@@ -193,7 +193,7 @@ export default function App() {
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
                   isActive
                     ? 'bg-[#D4A853] text-white shadow-md'
-                    : 'text-[#1A6B66]/80 hover:text-white hover:bg-[#1A6B66]/30'
+                    : 'text-white/80 hover:text-white hover:bg-[#1A6B66]/30'
                 }`}
               >
                 <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-white' : ''}`} />
@@ -301,7 +301,7 @@ export default function App() {
           <button
             onClick={() => setActiveTab('dashboard')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'dashboard' ? 'text-[#D4A853] font-bold' : 'text-[#1A6B66]/80'
+              activeTab === 'dashboard' ? 'text-[#D4A853] font-bold' : 'text-white/80'
             }`}
           >
             <LayoutDashboard className="w-4 h-4" />
@@ -312,7 +312,7 @@ export default function App() {
           <button
             onClick={() => setActiveTab('objective')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'objective' ? 'text-[#D4A853] font-bold' : 'text-[#1A6B66]/80'
+              activeTab === 'objective' ? 'text-[#D4A853] font-bold' : 'text-white/80'
             }`}
           >
             <Target className="w-4 h-4" />
@@ -336,7 +336,7 @@ export default function App() {
           <button
             onClick={() => setActiveTab('calendar')}
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
-              activeTab === 'calendar' ? 'text-[#D4A853] font-bold' : 'text-[#1A6B66]/80'
+              activeTab === 'calendar' ? 'text-[#D4A853] font-bold' : 'text-white/80'
             }`}
           >
             <Calendar className="w-4 h-4" />
@@ -349,7 +349,7 @@ export default function App() {
             className={`flex flex-col items-center gap-0.5 py-1 px-2 rounded-xl transition cursor-pointer ${
               activeTab === 'history' || activeTab === 'statistics' || activeTab === 'projection' || activeTab === 'milestones'
                 ? 'text-[#D4A853] font-bold'
-                : 'text-[#1A6B66]/80'
+                : 'text-white/80'
             }`}
           >
             <History className="w-4 h-4" />
@@ -368,19 +368,19 @@ export default function App() {
             </button>
             <button
               onClick={() => setActiveTab('statistics')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
             >
               Stats
             </button>
             <button
               onClick={() => setActiveTab('projection')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
             >
               Projection
             </button>
             <button
               onClick={() => setActiveTab('milestones')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-[#D4A853] text-white font-bold' : 'text-white/80/60'}`}
             >
               Paliers
             </button>

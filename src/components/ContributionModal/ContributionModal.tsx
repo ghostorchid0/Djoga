@@ -109,15 +109,15 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
               <Banknote className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base font-bold text-[#0D4F4C]">
+              <h2 className="text-base font-bold text-black">
                 {editingContribution ? 'Modifier la cotisation' : 'Ajouter une cotisation'}
               </h2>
-              <p className="text-xs text-[#1A6B66]/80">Fonds de sécurité personnel</p>
+              <p className="text-xs text-gray-600">Fonds de sécurité personnel</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-lg text-[#1A6B66]/80 hover:text-[#0D4F4C] hover:bg-[#F1F5F9] transition cursor-pointer"
+            className="p-1.5 rounded-lg text-gray-600 hover:text-black hover:bg-[#F1F5F9] transition cursor-pointer"
             aria-label="Fermer"
           >
             <X className="w-5 h-5" />
@@ -143,7 +143,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                     className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                       isSelected
                         ? 'bg-gradient-to-r bg-[#D4A853] text-white border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
-                        : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
+                        : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-gray-600 hover:bg-[#F1F5F9] hover:text-black'
                     }`}
                   >
                     {val.toLocaleString('fr-FR')} F
@@ -156,7 +156,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                   isCustomMode
                     ? 'bg-gradient-to-r bg-[#D4A853] text-white border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
-                    : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
+                    : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-gray-600 hover:bg-[#F1F5F9] hover:text-black'
                 }`}
               >
                 Autre montant
@@ -172,9 +172,9 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={customAmountStr}
                 onChange={handleCustomInputChange}
                 placeholder="Ex: 3 000"
-                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-3 text-lg font-mono font-bold text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pr-16"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-3 text-lg font-mono font-bold text-black focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pr-16"
               />
-              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-[#1A6B66]/80 pointer-events-none">
+              <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-semibold text-gray-600 pointer-events-none">
                 FCFA
               </span>
             </div>
@@ -182,7 +182,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
 
           {/* Date Picker */}
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-[#1A6B66]/80 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1.5">
               Date
             </label>
             <div className="relative">
@@ -190,15 +190,15 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-black focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
               />
-              <Calendar className="w-4 h-4 text-[#1A6B66]/80 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Calendar className="w-4 h-4 text-gray-600 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
           {/* Optional Note */}
           <div>
-            <label className="block text-xs font-semibold uppercase tracking-wider text-[#1A6B66]/80 mb-1.5">
+            <label className="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1.5">
               Note (facultatif)
             </label>
             <div className="relative">
@@ -207,9 +207,9 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 placeholder="Ex : Épargne du jour, reliquat marché..."
-                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-[#0D4F4C] focus:outline-none focus:border-[#6366F1] focus:ring-1 focus:ring-[#6366F1] transition pl-10"
+                className="w-full bg-[#F0F4F2] border border-[#1A6B66]/30 rounded-xl px-4 py-2.5 text-sm text-black focus:outline-none focus:border-[#D4A853] focus:ring-1 focus:ring-[#D4A853] transition pl-10"
               />
-              <FileText className="w-4 h-4 text-[#1A6B66]/80 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <FileText className="w-4 h-4 text-gray-600 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 

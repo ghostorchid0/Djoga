@@ -17,22 +17,22 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
       {/* Header section */}
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2">
-          <div className="p-2 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 border border-[#D4A853]/20 text-[#D4A853]">
+          <div className="p-2 rounded-lg bg-[#D4A853]/10 border border-[#D4A853]/30 text-[#D4A853]">
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
-            <span className="text-xs uppercase tracking-wider text-[#1A6B66]/80 font-semibold block">
+            <span className="text-xs uppercase tracking-wider text-gray-600 font-semibold block">
               ÉPARGNE DE SÉCURITÉ
             </span>
-            <div className="flex items-center gap-1.5 text-xs text-[#0D4F4C]/80">
+            <div className="flex items-center gap-1.5 text-xs text-black/80">
               <Target className="w-3.5 h-3.5 text-[#D4A853]" />
-              <span>Objectif : <strong className="text-[#0D4F4C]">{formatFCFA(goalAmount)}</strong></span>
+              <span>Objectif : <strong className="text-black">{formatFCFA(goalAmount)}</strong></span>
             </div>
           </div>
         </div>
 
         <div className="text-right">
-          <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-[#D4A853]/10 to-[#B8956E]/10 text-[#D4A853] border border-[#D4A853]/20">
+          <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-[#D4A853] text-white border border-[#B8956E]">
             {clampedProgress.toFixed(1)} %
           </span>
         </div>
@@ -41,12 +41,12 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
       {/* Main Saved Amount Display */}
       <div className="my-5">
         <div className="flex items-baseline gap-2">
-          <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0D4F4C] font-mono">
+          <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-black font-mono">
             {formatFCFA(totalSaved).replace(' FCFA', '')}
           </span>
           <span className="text-lg font-bold text-[#D4A853]">FCFA</span>
         </div>
-        <p className="text-xs text-[#1A6B66]/80 mt-1 flex items-center gap-1.5">
+        <p className="text-xs text-gray-600 mt-1 flex items-center gap-1.5">
           <span className="inline-block w-2 h-2 rounded-full bg-[#D4A853]" />
           <span>actuellement épargné dans ton fonds</span>
         </p>
@@ -54,9 +54,9 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
 
       {/* Progress Bar Container */}
       <div className="space-y-1.5">
-        <div className="flex justify-between items-center text-xs font-mono text-[#1A6B66]/80">
+        <div className="flex justify-between items-center text-xs font-mono text-gray-600">
           <span>{formatFCFA(totalSaved)}</span>
-          <span className="font-semibold text-[#0D4F4C]/80">{formatFCFA(goalAmount)}</span>
+          <span className="font-semibold text-black/80">{formatFCFA(goalAmount)}</span>
         </div>
 
         <div className="h-4 w-full bg-[#F0F4F2] rounded-full overflow-hidden p-0.5 border border-[#1A6B66]/30">
@@ -70,7 +70,7 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
           </div>
         </div>
 
-        <div className="flex justify-between items-center text-[11px] text-[#1A6B66]/80 pt-1">
+        <div className="flex justify-between items-center text-[11px] text-gray-600 pt-1">
           <span>{clampedProgress.toFixed(1)} % accompli</span>
           <span className="text-[#EC4899]/90 font-medium">
             Reste : {formatFCFA(remainingAmount)}
@@ -87,10 +87,10 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
                 ? 'text-[#10B981]'
                 : gap < 0
                 ? 'text-[#F59E0B]'
-                : 'text-[#1A6B66]/80'
+                : 'text-gray-600'
             }`}
           />
-          <span className="text-[#0D4F4C]/80">
+          <span className="text-black/80">
             {gap > 0 ? (
               <>
                 Tu es en <strong className="text-[#10B981] font-semibold">avance de {formatFCFA(gap)}</strong>
