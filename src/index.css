@@ -5,18 +5,22 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --safe-top: env(safe-area-inset-top, 0px);
 
-    /* African-inspired color palette - light theme */
-    --color-terracotta: #C77D63;
-    --color-sand: #D4A574;
-    --color-ochre: #E8B86D;
-    --color-deep-earth: #3D2B1F;
-    --color-savanna: #4A5D23;
-    --color-golden: #D4A853;
-    --color-ivory: #F5F0E6;
-    --color-charcoal: #1A1A1A;
-    --color-bronze: #8B6914;
-    --color-cream: #FAF8F5;
-    --color-warm-gray: #E8E4DC;
+    /* Modern Vibrant Palette */
+    --color-primary: #6366F1;
+    --color-primary-light: #818CF8;
+    --color-primary-dark: #4F46E5;
+    --color-secondary: #EC4899;
+    --color-accent: #F59E0B;
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-bg: #F8FAFC;
+    --color-bg-alt: #F1F5F9;
+    --color-surface: #FFFFFF;
+    --color-text: #0F172A;
+    --color-text-muted: #64748B;
+    --color-border: #E2E8F0;
+    --color-border-light: #F1F5F9;
   }
 
   html {
