@@ -138,9 +138,11 @@ export default function App() {
                 <span className="text-sm font-black tracking-tight text-white uppercase">
                   DJOGA
                 </span>
-                <span className="text-[10px] font-mono font-bold text-[#D4A853] bg-[#D4A853]/20 px-1.5 py-0.5 rounded-full border border-[#D4A853]/40">
-                  {formatFCFA(settings.goalAmount)}
-                </span>
+                {activeTab === 'dashboard' && (
+                  <span className="text-[10px] font-mono font-bold text-[#D4A853] bg-[#D4A853]/20 px-1.5 py-0.5 rounded-full border border-[#D4A853]/40">
+                    {formatFCFA(settings.goalAmount)}
+                  </span>
+                )}
               </div>
               <span className="text-[10px] text-white/80 font-medium block">
                 Discipline & Épargne Personnelle
@@ -149,31 +151,33 @@ export default function App() {
           </div>
 
           {/* Header Controls */}
-          <div className="flex items-center gap-2">
-            {/* Streak Counter */}
-            {calculations.currentStreak > 0 && (
-              <div
-                title={`${calculations.currentStreak} jours consécutifs de cotisation`}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#D4A853] border border-[#B8956E] text-white text-xs font-bold font-mono"
+          {activeTab === 'dashboard' && (
+            <div className="flex items-center gap-2">
+              {/* Streak Counter */}
+              {calculations.currentStreak > 0 && (
+                <div
+                  title={`${calculations.currentStreak} jours consécutifs de cotisation`}
+                  className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#D4A853] border border-[#B8956E] text-white text-xs font-bold font-mono"
+                >
+                  <Flame className="w-3.5 h-3.5 fill-white" />
+                  <span>{calculations.currentStreak} j</span>
+                </div>
+              )}
+
+              {/* PWA Install Button */}
+              <PWAInstallButton variant="header" />
+
+              {/* Settings Trigger */}
+              <button
+                onClick={() => setIsSettingsOpen(true)}
+                className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-[#1A6B66]/30 border border-[#1A6B66]/30 hover:border-[#D4A853]/50 transition cursor-pointer"
+                aria-label="Paramètres"
+                title="Paramètres de l'application"
               >
-                <Flame className="w-3.5 h-3.5 fill-white" />
-                <span>{calculations.currentStreak} j</span>
-              </div>
-            )}
-
-            {/* PWA Install Button */}
-            <PWAInstallButton variant="header" />
-
-            {/* Settings Trigger */}
-            <button
-              onClick={() => setIsSettingsOpen(true)}
-              className="p-2 rounded-xl text-white/80 hover:text-white hover:bg-[#1A6B66]/30 border border-[#1A6B66]/30 hover:border-[#D4A853]/50 transition cursor-pointer"
-              aria-label="Paramètres"
-              title="Paramètres de l'application"
-            >
-              <SettingsIcon className="w-4 h-4" />
-            </button>
-          </div>
+                <SettingsIcon className="w-4 h-4" />
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Secondary Category Navigation for Desktop & Tablets */}
