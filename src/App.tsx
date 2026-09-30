@@ -120,7 +120,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#F0F4F2] text-[#0D4F4C] flex flex-col font-sans transition-colors duration-200">
       {/* Top Header Bar */}
-      <header className="sticky top-0 z-40 bg-[#0D4F4C]/95 backdrop-blur-xl border-b border-[#1A6B66]/30 px-4 py-3 sm:px-6 shadow-sm">
+      <header className="sticky top-0 z-40 bg-[#0D4F4C] border-b border-[#1A6B66]/30 px-4 py-3 sm:px-6 shadow-sm">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           {/* Brand */}
           <div
@@ -151,7 +151,7 @@ export default function App() {
             {calculations.currentStreak > 0 && (
               <div
                 title={`${calculations.currentStreak} jours consécutifs de cotisation`}
-                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-gradient-to-r from-[#D4A853]/20 to-[#D4A853]/10 border border-[#D4A853]/40 text-[#D4A853] text-xs font-bold font-mono"
+                className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#D4A853]/20 border border-[#D4A853]/40 text-[#D4A853] text-xs font-bold font-mono"
               >
                 <Flame className="w-3.5 h-3.5 fill-[#D4A853]" />
                 <span>{calculations.currentStreak} j</span>
@@ -192,7 +192,7 @@ export default function App() {
                 onClick={() => setActiveTab(tab.id as TabType)}
                 className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer ${
                   isActive
-                    ? 'bg-gradient-to-r from-[#D4A853] to-[#B8956E] text-white shadow-md'
+                    ? 'bg-[#D4A853] text-white shadow-md'
                     : 'text-[#1A6B66]/80 hover:text-white hover:bg-[#1A6B66]/30'
                 }`}
               >
@@ -295,7 +295,7 @@ export default function App() {
       </main>
 
       {/* Mobile Bottom Navigation Bar (Visible on mobile screens) */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0D4F4C]/95 backdrop-blur-xl border-t border-[#1A6B66]/30 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0D4F4C] border-t border-[#1A6B66]/30 px-2 py-1.5 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] shadow-2xl">
         <div className="flex items-center justify-around">
           {/* 1. Dashboard */}
           <button
@@ -326,7 +326,7 @@ export default function App() {
               setTargetDateForAdd(undefined);
               setIsContributionModalOpen(true);
             }}
-            className="flex items-center justify-center w-11 h-11 -mt-4 rounded-2xl bg-gradient-to-tr from-[#D4A853] to-[#B8956E] text-white shadow-lg shadow-[#D4A853]/40 active:scale-95 transition cursor-pointer"
+            className="flex items-center justify-center w-11 h-11 -mt-4 rounded-2xl bg-[#D4A853] text-white shadow-lg shadow-[#D4A853]/40 active:scale-95 transition cursor-pointer"
             aria-label="Ajouter une cotisation"
           >
             <Plus className="w-6 h-6 stroke-[3]" />
@@ -362,25 +362,25 @@ export default function App() {
           <div className="flex items-center justify-center gap-1.5 pt-1.5 border-t border-[#1A6B66]/30 mt-1">
             <button
               onClick={() => setActiveTab('history')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'history' ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'history' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/60'}`}
             >
               Historique
             </button>
             <button
               onClick={() => setActiveTab('statistics')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'statistics' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
             >
               Stats
             </button>
             <button
               onClick={() => setActiveTab('projection')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'projection' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
             >
               Projection
             </button>
             <button
               onClick={() => setActiveTab('milestones')}
-              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
+              className={`text-[10px] px-2 py-0.5 rounded-md font-medium ${activeTab === 'milestones' ? 'bg-[#D4A853] text-white font-bold' : 'text-[#1A6B66]/80/60'}`}
             >
               Paliers
             </button>

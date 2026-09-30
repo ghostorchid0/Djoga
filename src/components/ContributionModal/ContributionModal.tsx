@@ -98,14 +98,14 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-0 sm:p-4">
       <div
-        className="w-full max-w-md bg-white border border-[#1A6B66]/30 rounded-t-3xl sm:rounded-2xl shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
+        className="w-full max-w-md bg-white border border-[#1A6B66]/30 rounded-t-xl sm:rounded-lg shadow-2xl p-5 sm:p-6 overflow-hidden animate-in slide-in-from-bottom-6 sm:fade-in duration-200"
         role="dialog"
         aria-modal="true"
       >
         {/* Header */}
         <div className="flex items-center justify-between pb-3 border-b border-[#1A6B66]/30">
           <div className="flex items-center gap-2">
-            <div className="p-2 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 text-[#6366F1]">
+            <div className="p-2 rounded-xl bg-gradient-to-br bg-[#D4A853]/10 text-white/10 text-[#6366F1]">
               <Banknote className="w-5 h-5" />
             </div>
             <div>
@@ -142,7 +142,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                     onClick={() => handleQuickSelect(val)}
                     className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                       isSelected
-                        ? 'bg-gradient-to-r from-[#D4A853] to-[#B8956E] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
+                        ? 'bg-gradient-to-r bg-[#D4A853] text-white border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
                         : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
                     }`}
                   >
@@ -155,7 +155,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
                 onClick={handleCustomModeToggle}
                 className={`py-2.5 px-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
                   isCustomMode
-                    ? 'bg-gradient-to-r from-[#D4A853] to-[#B8956E] border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
+                    ? 'bg-gradient-to-r bg-[#D4A853] text-white border-[#6366F1] text-white shadow-md shadow-[#6366F1]/30'
                     : 'bg-[#F0F4F2] border-[#1A6B66]/30 text-[#1A6B66]/80 hover:bg-[#F1F5F9] hover:text-[#0D4F4C]'
                 }`}
               >
@@ -225,7 +225,7 @@ export const ContributionModal: React.FC<ContributionModalProps> = ({
             <button
               type="submit"
               disabled={submitting}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A853] via-[#8B5CF6] to-[#B8956E] hover:from-[#4F46E5] hover:via-[#7C3AED] hover:to-[#DB2777] text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-[#6366F1]/30 active:scale-[0.99] transition cursor-pointer disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#D4A853] hover:bg-[#B8956E] text-white font-bold py-3.5 px-4 text-sm shadow-lg shadow-[#D4A853]/30 active:scale-[0.99] transition cursor-pointer disabled:opacity-50"
             >
               <Check className="w-4 h-4" />
               <span>{submitting ? 'ENREGISTREMENT...' : 'ENREGISTRER'}</span>

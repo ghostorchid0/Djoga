@@ -48,7 +48,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="space-y-5 pb-6 animate-in fade-in duration-150">
       {/* Strict Financial Discipline Banner */}
-      <div className="bg-gradient-to-r from-[#D4A853]/5 to-[#B8956E]/5 border border-[#6366F1]/20 rounded-2xl px-4 py-3 flex items-center justify-between text-xs text-[#1A6B66]/80">
+      <div className="bg-gradient-to-r bg-[#D4A853]/5 text-white/5 border border-[#6366F1]/20 rounded-lg px-4 py-3 flex items-center justify-between text-xs text-[#1A6B66]/80">
         <div className="flex items-center gap-2">
           <ShieldAlert className="w-4 h-4 text-[#6366F1] shrink-0" />
           <span className="truncate">
@@ -66,12 +66,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       {/* 4 Stat Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {/* 1. Épargne actuelle */}
-        <div className="bg-white border border-[#1A6B66]/30 rounded-2xl p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+        <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
               Épargne actuelle
             </span>
-            <div className="p-1.5 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 text-[#6366F1]">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br bg-[#D4A853]/10 text-white/10 text-[#6366F1]">
               <Wallet className="w-4 h-4" />
             </div>
           </div>
@@ -84,12 +84,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* 2. Montant restant */}
-        <div className="bg-white border border-[#1A6B66]/30 rounded-2xl p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+        <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
               Reste à épargner
             </span>
-            <div className="p-1.5 rounded-xl bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
               <Coins className="w-4 h-4" />
             </div>
           </div>
@@ -102,12 +102,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* 3. Jours cotisés */}
-        <div className="bg-white border border-[#1A6B66]/30 rounded-2xl p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+        <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
               Jours cotisés
             </span>
-            <div className="p-1.5 rounded-xl bg-gradient-to-br from-[#10B981]/10 to-[#10B981]/5 text-[#10B981]">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#10B981]/10 to-[#10B981]/5 text-[#10B981]">
               <CalendarCheck2 className="w-4 h-4" />
             </div>
           </div>
@@ -120,12 +120,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {/* 4. Série actuelle */}
-        <div className="bg-white border border-[#1A6B66]/30 rounded-2xl p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+        <div className="bg-white border border-[#1A6B66]/30 rounded-lg p-3.5 sm:p-4 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[11px] font-semibold text-[#1A6B66]/80 uppercase tracking-wider">
               Série actuelle
             </span>
-            <div className="p-1.5 rounded-xl bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 text-[#F59E0B]">
               <Flame className="w-4 h-4" />
             </div>
           </div>
@@ -147,7 +147,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div className="pt-1">
         <button
           onClick={onOpenContributionModal}
-          className="w-full flex items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#D4A853] via-[#8B5CF6] to-[#B8956E] hover:from-[#4F46E5] hover:via-[#7C3AED] hover:to-[#B8956E] text-white font-black text-base py-4 px-6 shadow-xl shadow-[#6366F1]/30 active:scale-[0.98] transition-all cursor-pointer"
+          className="w-full flex items-center justify-center gap-2.5 rounded-lg bg-[#D4A853] hover:bg-[#B8956E] text-white font-black text-base py-4 px-6 shadow-xl shadow-[#D4A853]/30 active:scale-[0.98] transition-all cursor-pointer"
         >
           <Plus className="w-6 h-6 stroke-[3]" />
           <span className="tracking-wide">+ AJOUTER UNE COTISATION</span>
@@ -159,7 +159,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* Ahead / Delay Card */}
         <div
           onClick={() => onNavigate('objective')}
-          className="bg-white hover:bg-[#F8FAFC] border border-[#1A6B66]/30 hover:border-[#6366F1]/30 rounded-2xl p-4 transition cursor-pointer flex flex-col justify-between"
+          className="bg-white hover:bg-[#F8FAFC] border border-[#1A6B66]/30 hover:border-[#6366F1]/30 rounded-lg p-4 transition cursor-pointer flex flex-col justify-between"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -201,7 +201,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         {/* Next Milestone Card */}
         <div
           onClick={() => onNavigate('milestones')}
-          className="bg-white hover:bg-[#F8FAFC] border border-[#1A6B66]/30 hover:border-[#6366F1]/30 rounded-2xl p-4 transition cursor-pointer flex flex-col justify-between"
+          className="bg-white hover:bg-[#F8FAFC] border border-[#1A6B66]/30 hover:border-[#6366F1]/30 rounded-lg p-4 transition cursor-pointer flex flex-col justify-between"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -254,19 +254,19 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         </div>
 
         {recentContributions.length === 0 ? (
-          <div className="bg-white border border-dashed border-[#1A6B66]/30 rounded-2xl p-6 text-center">
+          <div className="bg-white border border-dashed border-[#1A6B66]/30 rounded-lg p-6 text-center">
             <p className="text-sm text-[#1A6B66]/80">Aucune cotisation enregistrée pour le moment.</p>
             <p className="text-xs text-[#1A6B66]/80/60 mt-1">Commence dès aujourd'hui avec 1 000 FCFA pour poser ta première pierre.</p>
             <button
               onClick={onOpenContributionModal}
-              className="mt-3.5 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4A853]/10 to-[#B8956E]/10 text-xs font-semibold text-[#6366F1] hover:from-[#D4A853]/20 hover:to-[#B8956E]/20 transition cursor-pointer"
+              className="mt-3.5 inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r bg-[#D4A853]/10 text-white/10 text-xs font-semibold text-[#6366F1] hover:bg-[#D4A853]/20 hover:text-white/20 transition cursor-pointer"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Faire ma première cotisation</span>
             </button>
           </div>
         ) : (
-          <div className="bg-white border border-[#1A6B66]/30 rounded-2xl divide-y divide-[#E2E8F0] overflow-hidden">
+          <div className="bg-white border border-[#1A6B66]/30 rounded-lg divide-y divide-[#E2E8F0] overflow-hidden">
             {recentContributions.slice(0, 4).map((c) => (
               <div key={c.id} className="p-3.5 flex items-center justify-between hover:bg-[#F8FAFC] transition">
                 <div>

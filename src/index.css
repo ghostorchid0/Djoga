@@ -5,31 +5,40 @@
     --safe-bottom: env(safe-area-inset-bottom, 0px);
     --safe-top: env(safe-area-inset-top, 0px);
 
-    /* Logo-inspired color palette */
-    --color-forest: #0D4F4C;
-    --color-forest-light: #1A6B66;
-    --color-forest-dark: #0A3D3A;
-    --color-gold: #D4A853;
-    --color-gold-light: #E8B86D;
-    --color-gold-dark: #B8956E;
-    --color-white: #FFFFFF;
-    --color-off-white: #F8FAF8;
-    --color-cream: #F0F4F2;
-    --color-text: #0D4F4C;
-    --color-text-muted: #1A6B66;
-    --color-border: #0D4F4C;
-    --color-border-light: #1A6B66;
+    /* iOS-compatible minimal color palette */
+    --color-forest: rgb(13, 79, 76);
+    --color-forest-light: rgb(26, 107, 102);
+    --color-forest-dark: rgb(10, 61, 58);
+    --color-gold: rgb(212, 168, 83);
+    --color-gold-light: rgb(232, 184, 109);
+    --color-gold-dark: rgb(184, 149, 110);
+    --color-white: rgb(255, 255, 255);
+    --color-off-white: rgb(248, 250, 248);
+    --color-cream: rgb(240, 244, 242);
+    --color-text: rgb(13, 79, 76);
+    --color-text-muted: rgb(26, 107, 102);
+    --color-border: rgb(13, 79, 76);
+    --color-border-light: rgb(26, 107, 102);
   }
 
   html {
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   input, textarea, select {
     user-select: text;
     -webkit-user-select: text;
+  }
+
+  /* iOS optimization */
+  @supports (-webkit-touch-callout: none) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
   }
 }
 

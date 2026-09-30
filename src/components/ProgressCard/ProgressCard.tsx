@@ -12,14 +12,12 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
   const clampedProgress = Math.min(100, Math.max(0, progressPercentage));
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white to-[#F0F4F2] border border-[#1A6B66]/30 p-5 sm:p-6 shadow-lg">
-      {/* Background glow element */}
-      <div className="absolute -top-12 -right-12 w-48 h-48 bg-gradient-to-br from-[#D4A853]/10 to-[#0D4F4C]/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="relative overflow-hidden rounded-xl bg-white border border-[#1A6B66]/30 p-5 sm:p-6 shadow-md">
 
       {/* Header section */}
       <div className="flex items-center justify-between gap-2 mb-3">
         <div className="flex items-center gap-2">
-          <div className="p-2 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 border border-[#D4A853]/20 text-[#6366F1]">
+          <div className="p-2 rounded-xl bg-gradient-to-br from-[#D4A853]/10 to-[#B8956E]/10 border border-[#D4A853]/20 text-[#D4A853]">
             <ShieldCheck className="w-5 h-5" />
           </div>
           <div>
@@ -27,14 +25,14 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
               ÉPARGNE DE SÉCURITÉ
             </span>
             <div className="flex items-center gap-1.5 text-xs text-[#0D4F4C]/80">
-              <Target className="w-3.5 h-3.5 text-[#6366F1]" />
+              <Target className="w-3.5 h-3.5 text-[#D4A853]" />
               <span>Objectif : <strong className="text-[#0D4F4C]">{formatFCFA(goalAmount)}</strong></span>
             </div>
           </div>
         </div>
 
         <div className="text-right">
-          <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-[#D4A853]/10 to-[#B8956E]/10 text-[#6366F1] border border-[#D4A853]/20">
+          <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-gradient-to-r from-[#D4A853]/10 to-[#B8956E]/10 text-[#D4A853] border border-[#D4A853]/20">
             {clampedProgress.toFixed(1)} %
           </span>
         </div>
@@ -46,10 +44,10 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
           <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0D4F4C] font-mono">
             {formatFCFA(totalSaved).replace(' FCFA', '')}
           </span>
-          <span className="text-lg font-bold bg-gradient-to-r from-[#D4A853] to-[#B8956E] bg-clip-text text-transparent">FCFA</span>
+          <span className="text-lg font-bold text-[#D4A853]">FCFA</span>
         </div>
         <p className="text-xs text-[#1A6B66]/80 mt-1 flex items-center gap-1.5">
-          <span className="inline-block w-2 h-2 rounded-full bg-gradient-to-r from-[#D4A853] to-[#B8956E]" />
+          <span className="inline-block w-2 h-2 rounded-full bg-[#D4A853]" />
           <span>actuellement épargné dans ton fonds</span>
         </p>
       </div>
@@ -61,9 +59,9 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
           <span className="font-semibold text-[#0D4F4C]/80">{formatFCFA(goalAmount)}</span>
         </div>
 
-        <div className="h-4 w-full bg-[#F1F5F9] rounded-full overflow-hidden p-0.5 border border-[#1A6B66]/30">
+        <div className="h-4 w-full bg-[#F0F4F2] rounded-full overflow-hidden p-0.5 border border-[#1A6B66]/30">
           <div
-            className="h-full rounded-full bg-gradient-to-r from-[#D4A853] via-[#8B5CF6] to-[#B8956E] transition-all duration-500 ease-out relative"
+            className="h-full rounded-full bg-[#D4A853] transition-all duration-500 ease-out relative"
             style={{ width: `${clampedProgress}%` }}
           >
             {clampedProgress > 15 && (
@@ -109,7 +107,7 @@ export const ProgressCard: React.FC<ProgressCardProps> = ({ calculations, onOpen
 
         <button
           onClick={onOpenContributionModal}
-          className="text-xs font-semibold text-[#6366F1] hover:text-[#4F46E5] underline underline-offset-4 cursor-pointer"
+          className="text-xs font-semibold text-[#D4A853] hover:text-[#4F46E5] underline underline-offset-4 cursor-pointer"
         >
           Cotiser
         </button>
