@@ -164,9 +164,6 @@ export default function App() {
                 </div>
               )}
 
-              {/* PWA Install Button */}
-              <PWAInstallButton variant="header" />
-
               {/* Settings Trigger */}
               <button
                 onClick={() => setIsSettingsOpen(true)}
