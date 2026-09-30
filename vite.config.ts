@@ -14,8 +14,8 @@ export default defineConfig(() => {
         includeAssets: ['favicon-32x32.png', 'apple-touch-icon.png', 'icon.svg'],
         manifest: {
           id: '/',
-          name: 'Security Fund - Suivi d’Épargne Personnelle',
-          short_name: 'SecurityFund',
+          name: 'Djoga - Suivi d’Épargne Personnelle',
+          short_name: 'Djoga',
           description: 'Fonds de sécurité personnel de 200 000 FCFA avec suivi quotidien et fonctionnement hors ligne.',
           theme_color: '#090d16',
           background_color: '#090d16',

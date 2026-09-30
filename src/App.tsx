@@ -110,7 +110,7 @@ export default function App() {
         <div className="flex flex-col items-center gap-3">
           <div className="w-10 h-10 border-3 border-emerald-500/20 border-t-emerald-500 rounded-full animate-spin" />
           <span className="text-xs uppercase tracking-widest text-slate-400 font-bold">
-            Security Fund...
+            Djoga...
           </span>
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function App() {
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-sm font-black tracking-tight text-white uppercase">
-                  SECURITY FUND
+                  DJOGA
                 </span>
                 <span className="text-[10px] font-mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">
                   {formatFCFA(settings.goalAmount)}

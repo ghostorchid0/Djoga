@@ -34,7 +34,7 @@ export function sendDailyReminderNotification(targetAmount: number = 1000): void
   if (Notification.permission === 'granted') {
     try {
       const formatted = targetAmount.toLocaleString('fr-FR');
-      new Notification('Security Fund', {
+      new Notification('Djoga', {
         body: `N'oublie pas de protéger ton avenir. Cotisation du jour : ${formatted} FCFA.`,
         icon: '/pwa-192x192.png',
         badge: '/favicon-32x32.png',
